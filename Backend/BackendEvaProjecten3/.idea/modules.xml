@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BackendEva.iml" filepath="$PROJECT_DIR$/.idea/modules/BackendEva.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BackendEva_main.iml" filepath="$PROJECT_DIR$/.idea/modules/BackendEva_main.iml" group="BackendEva" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BackendEva_test.iml" filepath="$PROJECT_DIR$/.idea/modules/BackendEva_test.iml" group="BackendEva" />
+    </modules>
+  </component>
+</project>
