@@ -2,27 +2,37 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { LoginComponentComponent } from './login-component/login-component.component';
-import { RegisterComponentComponent } from './register-component/register-component.component';
-import { HomeComponentComponent } from './home-component/home-component.component';
-import { MijnreceptenComponentComponent } from './mijnrecepten-component/mijnrecepten-component.component';
-import { InfoComponentComponent } from './info-component/info-component.component';
-import { MainComponentComponent } from './main-component/main-component.component';
+import { LoginComponent} from './login/login-component';
+import {RouterModule} from "@angular/router";
+import { RegisterComponent } from './register/register.component';
+import { MainComponent } from './main/main.component';
+import { MijnReceptenComponent } from './mijn-recepten/mijn-recepten.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponentComponent,
-    RegisterComponentComponent,
-    HomeComponentComponent,
-    MijnreceptenComponentComponent,
-    InfoComponentComponent,
-    MainComponentComponent,
+    LoginComponent,
+    RegisterComponent,
+    MainComponent,
+    MijnReceptenComponent,
+    InfoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'home',
+        component: MainComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
