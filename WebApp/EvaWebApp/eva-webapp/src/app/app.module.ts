@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
 import { MijnReceptenComponent } from './mijn-recepten/mijn-recepten.component';
 import { InfoComponent } from './info/info.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InfoComponent } from './info/info.component';
     RegisterComponent,
     MainComponent,
     MijnReceptenComponent,
-    InfoComponent
+    InfoComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
