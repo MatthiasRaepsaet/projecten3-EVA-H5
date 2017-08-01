@@ -1,0 +1,13 @@
+.alertlist {
+  list-style: disc;
+  text-align: left;
+  padding: 20px;
+  margin-left: 15px;
+
+}
+.alert {
+  border: darkred solid;
+  border-width: 1px;
+  border-radius: 5px;
+  font-weight: bold;
+}
