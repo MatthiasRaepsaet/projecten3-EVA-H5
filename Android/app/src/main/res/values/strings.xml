@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EVA</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Wachtwoord</string>
+    <string name="hint_name">Naam</string>
+    <string name="btn_login">Aanmelden</string>
+    <string name="btn_register">Registreren</string>
+    <string name="btn_link_to_register">Nog geen lid? Registreer je nu</string>
+    <string name="btn_link_to_login">Al een lid? Meld je nu aan.</string>
+    <string name="welcome">Welkom bij EVA</string>
+    <string name="btn_logout">afmelden</string>
+    <string name="name">Naam</string>
+</resources>
