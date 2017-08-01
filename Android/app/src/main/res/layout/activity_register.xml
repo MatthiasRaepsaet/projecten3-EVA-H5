@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="be.sofie.eva.eva.ui.RegisterActivity">
+    tools:context="be.hogent.Eva2017g5.ui.RegisterActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"
