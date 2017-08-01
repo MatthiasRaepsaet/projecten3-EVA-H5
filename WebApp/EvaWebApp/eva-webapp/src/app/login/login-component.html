@@ -2,11 +2,11 @@
   <img src="../assets/evalogo.jpg">
   <app-alert [hidden]="showAlert"></app-alert>
   <form>
-    <input placeholder="Username" #usernameInpput (onKeyEnter)="login(usernameInpput.value, passwordInput.value)">
-    <input type="password" placeholder="Password" #passwordInput (onKeyEnter)="login(usernameInpput.value, passwordInput.value)">
+    <input placeholder="Username" #usernameInpput (keyup.enter)="login(usernameInpput.value, passwordInput.value)">
+    <input type="password" placeholder="Password" #passwordInput (keyup.enter)="login(usernameInpput.value, passwordInput.value)">
     <div>
       <a class="waves-effect waves-light btn green" (click)="login(usernameInpput.value, passwordInput.value)">Login</a>
-      <a class="waves-effect waves-light btn green">Register</a>
+      <a class="waves-effect waves-light btn green" href="register">Register</a>
     </div>
   </form>
 </div>

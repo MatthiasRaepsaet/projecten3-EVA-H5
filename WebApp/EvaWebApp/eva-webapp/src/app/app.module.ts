@@ -30,6 +30,10 @@ import { AlertComponent } from './alert/alert.component';
       {
         path: 'home',
         component: MainComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
       }
     ])
   ],
