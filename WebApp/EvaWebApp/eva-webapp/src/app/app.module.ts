@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
 import { LoginComponent} from './login/login-component';
 import {RouterModule} from "@angular/router";
@@ -9,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { MijnReceptenComponent } from './mijn-recepten/mijn-recepten.component';
 import { InfoComponent } from './info/info.component';
 import { AlertComponent } from './alert/alert.component';
+import {RecipesService} from "./services/recipes.service";
 
 @NgModule({
   declarations: [
@@ -35,9 +38,10 @@ import { AlertComponent } from './alert/alert.component';
         path: 'register',
         component: RegisterComponent
       }
-    ])
+    ]),
+    HttpModule
   ],
-  providers: [],
+  providers: [RecipesService],
   bootstrap: [AppComponent]
 })
 

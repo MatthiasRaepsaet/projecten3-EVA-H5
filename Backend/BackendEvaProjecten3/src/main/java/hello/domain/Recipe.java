@@ -24,6 +24,8 @@ public class Recipe {
     private int upvotes;
     private int downvotes;
 
+    private String category;
+
     @OneToMany
     private List<Comment> comments;
 
@@ -32,13 +34,14 @@ public class Recipe {
         this.downvotes = 0;
     }
 
-    public Recipe(String title, String description, EvaUser author, List<Ingredient> ingredients) {
+    public Recipe(String title, String description, EvaUser author, List<Ingredient> ingredients, String category) {
         this.title = title;
         this.description = description;
         this.author = author;
         this.ingredients = ingredients;
         this.upvotes = 0;
         this.downvotes = 0;;
+        this.category = category;
     }
 
     public long getId() {
@@ -103,5 +106,13 @@ public class Recipe {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

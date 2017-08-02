@@ -1,8 +1,13 @@
 <div class="container">
   <div class="row">
-    <a class="waves-effect waves-light btn col s4 receptbutton green">Mijn recepten</a>
-    <a class="waves-effect waves-light btn col s4 receptbutton green">Favoriete recepten</a>
-    <a class="waves-effect waves-light btn col s4 receptbutton green">Recept zoeken</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="mijnRecepten()" *ngIf="!mijnReceptenbool">Mijn recepten</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="mijnRecepten()" *ngIf="mijnReceptenbool">Mijn recepten</a>
+
+    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="favorieteRecepten()" *ngIf="!favoReceptenbool">Favoriete recepten</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="favorieteRecepten()" *ngIf="favoReceptenbool">Favoriete recepten</a>
+
+    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="receptZoeken()" *ngIf="!receptenZoekenbool">Recept zoeken</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="receptZoeken()" *ngIf="receptenZoekenbool">Recept zoeken</a>
   </div>
   <div class="row z-depth-2 mydisplay">
 
@@ -40,7 +45,7 @@
       <h1>Vegan1</h1>
       <div class="row">
         <div class="col s1"></div>
-        <div class="col s10 myrecipe white z-depth-1">
+        <div class="col s10 myrecipe z-depth-1">
           <h2>Veganistisch recept1</h2>
           <div class="row">
             <p class="col s7">
@@ -57,7 +62,7 @@
       </div>
       <div class="row">
         <div class="col s1"></div>
-        <div class="col s10 myrecipe white z-depth-1">
+        <div class="col s10 myrecipe z-depth-1">
           <h2>Veganistisch recept2</h2>
           <div class="row">
             <p class="col s7">
@@ -74,7 +79,7 @@
       </div>
       <div class="row">
         <div class="col s1"></div>
-        <div class="col s10 myrecipe white z-depth-1">
+        <div class="col s10 myrecipe z-depth-1">
           <h2>Veganistisch recept3</h2>
           <div class="row">
             <p class="col s7">
