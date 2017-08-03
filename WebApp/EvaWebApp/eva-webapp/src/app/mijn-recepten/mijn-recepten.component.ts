@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RecipesService} from "../services/recipes.service";
 import {AddRecipeDto} from "../dtos/AddRecipeDto";
+import {$} from "protractor";
 
 @Component({
   selector: 'app-mijn-recepten',
@@ -51,5 +52,9 @@ export class MijnReceptenComponent implements OnInit {
     this.favoReceptenbool = false;
     this.receptenZoekenbool = false;
     //this.recipesService.addRecipe(this.myRecipe).subscribe( result => console.log(result));
+  }
+
+  selectRecipe(){
+
   }
 }

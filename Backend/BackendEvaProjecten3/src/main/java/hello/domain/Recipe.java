@@ -16,8 +16,7 @@ public class Recipe {
     private String title;
     private String description;
 
-    @ManyToOne
-    private EvaUser author;
+    private String authorName;
 
     @ManyToMany
     private List<Ingredient> ingredients;
@@ -34,14 +33,14 @@ public class Recipe {
         this.downvotes = 0;
     }
 
-    public Recipe(String title, String description, EvaUser author, List<Ingredient> ingredients, String category) {
+    public Recipe(String title, String description, List<Ingredient> ingredients, String category, String authorName) {
         this.title = title;
         this.description = description;
-        this.author = author;
         this.ingredients = ingredients;
         this.upvotes = 0;
         this.downvotes = 0;;
         this.category = category;
+        this.authorName = authorName;
     }
 
     public long getId() {
@@ -92,12 +91,12 @@ public class Recipe {
         this.downvotes = downvotes;
     }
 
-    public EvaUser getAuthor() {
-        return author;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setAuthor(EvaUser author) {
-        this.author = author;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
     }
 
     public List<Comment> getComments() {

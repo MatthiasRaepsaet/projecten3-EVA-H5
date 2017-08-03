@@ -12,6 +12,7 @@ import { MijnReceptenComponent } from './mijn-recepten/mijn-recepten.component';
 import { InfoComponent } from './info/info.component';
 import { AlertComponent } from './alert/alert.component';
 import {RecipesService} from "./services/recipes.service";
+import { SelectedRecipeComponent } from './mijn-recepten/selected-recipe/selected-recipe.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {RecipesService} from "./services/recipes.service";
     MainComponent,
     MijnReceptenComponent,
     InfoComponent,
-    AlertComponent
+    AlertComponent,
+    SelectedRecipeComponent
   ],
   imports: [
     BrowserModule,

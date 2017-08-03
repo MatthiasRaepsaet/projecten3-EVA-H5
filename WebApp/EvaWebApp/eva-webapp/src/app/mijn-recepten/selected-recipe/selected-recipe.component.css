@@ -1,0 +1,28 @@
+.firstdiv {
+  border-radius: 5px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  position: relative;
+}
+
+.recipedisplay {
+  border-radius: 5px;
+  height: 500px;
+}
+
+h3 {
+  margin: 20px;
+}
+
+.arrows {
+  height: 50px;
+}
+
+.personen {
+  font-size: 50px;
+}
+
+.personenwidget {
+  margin-top: 20px;
+}

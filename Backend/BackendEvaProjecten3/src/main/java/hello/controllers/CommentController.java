@@ -4,6 +4,7 @@ import hello.domain.Comment;
 import hello.domain.Recipe;
 import hello.repositories.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by Matthias on 4/07/2017.
  */
 @RestController
+@Transactional
 public class CommentController {
     @Autowired
     private CommentRepository commentRepository;

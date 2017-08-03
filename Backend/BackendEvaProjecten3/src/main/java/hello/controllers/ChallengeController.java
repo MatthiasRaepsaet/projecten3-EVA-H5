@@ -3,6 +3,7 @@ package hello.controllers;
 import hello.domain.Challenge;
 import hello.repositories.ChallengeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Created by Matthias on 4/07/2017.
  */
 @RestController
+@Transactional
 public class ChallengeController {
     @Autowired
     private ChallengeRepository challengeRepository;

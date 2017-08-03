@@ -12,7 +12,9 @@ import hello.repositories.CommentRepository;
 import hello.repositories.EvaUserRepository;
 import hello.repositories.IngredientRepository;
 import hello.repositories.RecipeRepository;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -22,7 +24,9 @@ import java.util.List;
  * Created by Matthias on 4/07/2017.
  */
 @RestController
+@javax.transaction.Transactional
 public class RecipeController {
+
     @Autowired
     private RecipeRepository recipeRepository;
 
@@ -44,7 +48,7 @@ public class RecipeController {
             recipeDto = new RecipeDto();
             recipeDto.setId(recipe.getId());
             recipeDto.setTitle(recipe.getTitle());
-            recipeDto.setAuthor(recipe.getAuthor().getUsername());
+            recipeDto.setAuthor(recipe.getAuthorName());
             recipeDto.setDescription(recipe.getDescription());
             recipeDto.setDownvotes(recipe.getDownvotes());
             recipeDto.setUpvotes(recipe.getUpvotes());
@@ -77,12 +81,17 @@ public class RecipeController {
             ingredientRepository.save(ingredient);
         }
         newRecipe.setTitle(addRecipeDto.getTitle());
-        newRecipe.setAuthor(user);
+        newRecipe.setAuthorName(user.getUsername());
         newRecipe.setDescription(addRecipeDto.getDescription());
         newRecipe.setIngredients(addRecipeDto.getIngredients());
-        recipeRepository.save(newRecipe);
         user.getMyRecipes().add(newRecipe);
+        recipeRepository.save(newRecipe);
         evaUserRepository.save(user);
+    }
+
+    @RequestMapping(path = "/getrecipebyid")
+    public Recipe getRecipeById(@RequestParam long id){
+        return recipeRepository.findOne(id);
     }
 
     @RequestMapping(path = "/addcomment", method = RequestMethod.PUT)
