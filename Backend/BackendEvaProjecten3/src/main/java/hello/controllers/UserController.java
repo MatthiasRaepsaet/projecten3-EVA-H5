@@ -25,7 +25,7 @@ public class UserController {
 
     @RequestMapping("/adduser")
     public void addUser(@RequestBody EvaUser newUser){
-        EvaUser evaUser = newUser;
+        EvaUser evaUser = new EvaUser(newUser.getFirstName(), newUser.getLastName(), newUser.getEmail(), newUser.getUsername(), newUser.getPassword());
         evaUserRepository.save(evaUser);
     }
 

@@ -1,4 +1,4 @@
-<div class="container main" *ngIf="">
+<div class="container main" *ngIf="!recipeSelected">
   <div class="row">
     <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="mijnRecepten()" *ngIf="!mijnReceptenbool">Mijn recepten</a>
     <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="mijnRecepten()" *ngIf="mijnReceptenbool">Mijn recepten</a>
@@ -45,7 +45,7 @@
       <h1>Vegan1</h1>
       <div class="row">
         <div class="col s1"></div>
-        <div class="col s10 myrecipe z-depth-1">
+        <div class="col s10 myrecipe z-depth-1" (click)="selectRecipe()">
           <h2>Veganistisch recept1</h2>
           <div class="row">
             <p class="col s7">
@@ -62,7 +62,7 @@
       </div>
       <div class="row">
         <div class="col s1"></div>
-        <div class="col s10 myrecipe z-depth-1">
+        <div class="col s10 myrecipe z-depth-1" (click)="selectRecipe()">
           <h2>Veganistisch recept2</h2>
           <div class="row">
             <p class="col s7">
@@ -79,7 +79,7 @@
       </div>
       <div class="row">
         <div class="col s1"></div>
-        <div class="col s10 myrecipe z-depth-1">
+        <div class="col s10 myrecipe z-depth-1" (click)="selectRecipe()">
           <h2>Veganistisch recept3</h2>
           <div class="row">
             <p class="col s7">
@@ -97,4 +97,4 @@
     </div>
   </div>
 </div>
-<app-selected-recipe></app-selected-recipe>
+<app-selected-recipe (recipeSelectedEmitter)="selectedRecipeReceiver($event)" *ngIf="recipeSelected"></app-selected-recipe>

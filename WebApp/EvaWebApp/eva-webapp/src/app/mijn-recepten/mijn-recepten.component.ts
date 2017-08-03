@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {RecipesService} from "../services/recipes.service";
 import {AddRecipeDto} from "../dtos/AddRecipeDto";
-import {$} from "protractor";
 
 @Component({
   selector: 'app-mijn-recepten',
@@ -17,6 +16,9 @@ export class MijnReceptenComponent implements OnInit {
   receptenZoekenbool = false;
 
   recipesService;
+
+  @Input()
+  recipeSelected = false;
 
   constructor(recipesService: RecipesService) {
     this.recipesService = recipesService;
@@ -55,6 +57,10 @@ export class MijnReceptenComponent implements OnInit {
   }
 
   selectRecipe(){
+    this.recipeSelected = true;
+  }
 
+  selectedRecipeReceiver(event){
+    this.recipeSelected = event.valueOf();
   }
 }

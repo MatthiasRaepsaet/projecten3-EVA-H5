@@ -1,13 +1,55 @@
 <div class="container z-depth-1 lime firstdiv">
-  <div class="white recipedisplay z-depth-2 row">
-    <h3 class="col s6">Veganistisch recept1</h3>
-    <div class="personenwidget">
-      <img src="../../../assets/arrow_left_black.png" class="arrows  col s1 responsive-img">
-      <div class="personen col s1">2</div>
-      <!--<img src="../../../assets/arrow_left_grey.png" class="arrows">-->
-      <img src="../../../assets/arrow_right_black.png" class="arrows  col s1 responsive-img">
-      <!--<img src="../../../assets/arrow_right_grey.png" class="arrows">-->
-      <div class="col s3"></div>
+  <div class="white recipedisplay z-depth-2">
+    <div class="row" style="margin-left: 10px">
+      <h3 class="col s5">Veganistisch recept1</h3>
+      <div class="personenwidget">
+        <div class="col s1"></div>
+        <div class="col s3 inner">
+          <a class="btn-floating  waves-effect waves-light green child" (click)="removePersonen()"><i
+            class="material-icons">arrow_back</i></a>
+          <div class="personen child">{{personenCount}} {{singleMulti}}</div>
+          <a class="btn-floating waves-effect waves-light green child" (click)="addPersonen()"><i
+            class="material-icons">arrow_forward</i></a>
+        </div>
+        <div class="col s1"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s1"></div>
+      <div class="afbeelding col s5"><img src="http://d1nsg9ep31qa5b.cloudfront.net/wp-content/uploads/2016/05/10-tips-voor-veganistisch-eten-2-1024x768.jpg" class="responsive-img z-depth-1"></div>
+      <div class="col s1"></div>
+      <div class="grey lighten-4 ingredientenlijst col s4 z-depth-1">
+        <ul *ngFor="let ing of relativeIngredientenList">
+          <li>{{ing.amount}} {{ing.metric}} {{ing.name}}</li>
+        </ul>
+      </div>
+      <div class="col s1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col s1"></div>
+      <div class="grey lighten-4 bereiding col s10 section z-depth-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis nulla vel mauris tincidunt, id tincidunt lacus ultricies. Aenean molestie rutrum elit, vel maximus nisi vulputate at. Fusce fermentum dui eu diam condimentum feugiat. Nam non elit eu eros finibus ultrices sed id erat. Nullam sit amet dictum tellus. Duis ac porttitor ligula. Proin sit amet vulputate nisi, quis tempus magna. Sed nec blandit ligula. Nulla sed fringilla est. Suspendisse ultricies, sem nec fringilla ultricies, purus leo fermentum tortor, quis vulputate mi eros eget odio. Pellentesque vel lobortis enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum finibus diam nisi, eget ultricies ligula dapibus vel. Phasellus vulputate magna vel nibh posuere egestas. Nam ut nisi lorem.</div>
+      <div class="col s1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col s1"></div>
+      <div class="grey lighten-4 comments col s10 z-depth-1" >
+        <div *ngFor="let com of comments">
+        <div class="white comment z-depth-1">
+          <h5>{{com.name}}</h5>
+          <p>{{com.message}}</p>
+        </div>
+        </div>
+      </div>
+      <div class="col s1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col s1"></div>
+      <div class="col s2"><a class="waves-effect waves-light btn blue like" (click)="likeRecipe()"><i class="material-icons left">mood</i>{{like}} </a></div>
+      <div class="col s2"><a class="waves-effect waves-light btn red dislike" (click)="dislikeRecipe()"><i class="material-icons left">mood_bad</i>{{dislike}} </a></div>
     </div>
   </div>
+  <a class="waves-effect waves-light btn green terug" (click)="terug()"><i class="material-icons left">keyboard_backspace</i>Terug</a>
 </div>

@@ -4,11 +4,12 @@
   margin: 0 auto;
   padding: 40px;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .recipedisplay {
   border-radius: 5px;
-  height: 500px;
+  height: 100%;
 }
 
 h3 {
@@ -20,9 +21,48 @@ h3 {
 }
 
 .personen {
-  font-size: 50px;
+  font-size: 30px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
 }
 
 .personenwidget {
   margin-top: 20px;
+}
+
+.child {
+  float: left;
+  margin-top: 20px;
+}
+
+.bereiding {
+  border-radius: 5px;
+  height: 100%;
+  padding: 20px;
+}
+
+.afbeelding {
+  height: 400px;
+
+}
+
+.ingredientenlijst {
+  height: 400px;
+}
+
+.comments {
+  height: 100%;
+}
+
+.comment {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.terug {
+  margin-top: 20px;
+  margin-left: 30px;
 }

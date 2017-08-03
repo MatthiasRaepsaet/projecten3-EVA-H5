@@ -13,6 +13,7 @@ import { InfoComponent } from './info/info.component';
 import { AlertComponent } from './alert/alert.component';
 import {RecipesService} from "./services/recipes.service";
 import { SelectedRecipeComponent } from './mijn-recepten/selected-recipe/selected-recipe.component';
+import {UsersService} from "./services/user/users.service";
 
 @NgModule({
   declarations: [
@@ -39,11 +40,15 @@ import { SelectedRecipeComponent } from './mijn-recepten/selected-recipe/selecte
       {
         path: 'register',
         component: RegisterComponent
+      },
+      {
+        path: 'mijn-recepten',
+        component: MijnReceptenComponent
       }
     ]),
     HttpModule
   ],
-  providers: [RecipesService],
+  providers: [RecipesService, UsersService],
   bootstrap: [AppComponent]
 })
 
