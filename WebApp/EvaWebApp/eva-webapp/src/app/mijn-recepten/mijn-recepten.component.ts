@@ -1,6 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RecipesService} from "../services/recipes.service";
 import {AddRecipeDto} from "../dtos/AddRecipeDto";
+import {UsersService} from "../services/user/users.service";
+import {LoginDto} from "../dtos/LoginDto";
+import {EvaUserDto} from "../dtos/EvaUserDto";
+import {RecipeDto} from "../dtos/RecipeDto";
+import {log} from "util";
 
 @Component({
   selector: 'app-mijn-recepten',
@@ -9,26 +14,34 @@ import {AddRecipeDto} from "../dtos/AddRecipeDto";
 })
 export class MijnReceptenComponent implements OnInit {
 
+  recipe : RecipeDto;
+
   myRecipe: AddRecipeDto;
+
+  displayedRecipes : RecipeDto[];
 
   mijnReceptenbool = true;
   favoReceptenbool = false;
   receptenZoekenbool = false;
 
+  loggedUser : EvaUserDto = new EvaUserDto;
+
   recipesService;
+  usersService;
 
   @Input()
   recipeSelected = false;
 
-  constructor(recipesService: RecipesService) {
+  constructor(recipesService: RecipesService, usersService : UsersService) {
     this.recipesService = recipesService;
-    this.myRecipe = {title : "new recipe", description : "dit is mijn nieuw recept", userId : 1, ingredients : [{id : 1, name : "rijst", amount :  200}]};
+    this.usersService = usersService;
   }
 
   ngOnInit() {
-    console.log(this.mijnReceptenbool);
-    console.log(this.favoReceptenbool);
-    console.log(this.receptenZoekenbool);
+    this.usersService.getUser(JSON.parse(localStorage.getItem("myUser")).id).subscribe(result => {
+      this.loggedUser = result;
+      this.displayedRecipes = this.loggedUser.myRecipes;
+    });
   }
 
   receptZoeken(){
@@ -36,9 +49,7 @@ export class MijnReceptenComponent implements OnInit {
     this.mijnReceptenbool = false;
     this.favoReceptenbool = false;
     this.receptenZoekenbool = true;
-    /*this.recipesService.getRecipes().subscribe(data => {
-      console.log(data);
-    });*/
+    this.refreshUser();
   }
 
   favorieteRecepten(){
@@ -46,6 +57,10 @@ export class MijnReceptenComponent implements OnInit {
     this.mijnReceptenbool = false;
     this.favoReceptenbool = true;
     this.receptenZoekenbool = false;
+    this.usersService.getUser(JSON.parse(localStorage.getItem("myUser")).id).subscribe(result => {
+      this.loggedUser = result;
+      this.displayedRecipes = this.loggedUser.favoriteRecipes;
+    });
   }
 
   mijnRecepten(){
@@ -53,14 +68,27 @@ export class MijnReceptenComponent implements OnInit {
     this.mijnReceptenbool = true;
     this.favoReceptenbool = false;
     this.receptenZoekenbool = false;
-    //this.recipesService.addRecipe(this.myRecipe).subscribe( result => console.log(result));
+    this.usersService.getUser(JSON.parse(localStorage.getItem("myUser")).id).subscribe(result => {
+      this.loggedUser = result;
+      this.displayedRecipes = this.loggedUser.myRecipes;
+    });
   }
 
-  selectRecipe(){
+  selectRecipe(recipe){
+    this.recipe = recipe;
     this.recipeSelected = true;
   }
 
   selectedRecipeReceiver(event){
     this.recipeSelected = event.valueOf();
+  }
+
+  refreshUser(){
+    console.log("refresh");
+    this.usersService.getUser(JSON.parse(localStorage.getItem("myUser")).id).subscribe(result => this.loggedUser = result);
+  }
+
+  test(){
+    console.log(JSON.parse(localStorage.getItem("myUser")));
   }
 }

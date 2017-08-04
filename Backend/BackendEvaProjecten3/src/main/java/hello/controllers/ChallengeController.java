@@ -5,6 +5,7 @@ import hello.repositories.ChallengeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class ChallengeController {
     @Autowired
     private ChallengeRepository challengeRepository;
 
-    @RequestMapping(path = "/getmychallenges")
+    @RequestMapping(path = "/getmychallenges", method = RequestMethod.GET)
     public Iterable<Challenge> getThreeChallenges(){
         List<Challenge> challengeList = new ArrayList<>();
         List<Challenge> resultList = new ArrayList<>();

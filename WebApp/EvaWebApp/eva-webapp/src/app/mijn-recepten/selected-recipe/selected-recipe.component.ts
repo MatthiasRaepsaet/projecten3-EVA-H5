@@ -1,18 +1,24 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Router} from "@angular/router";
+import {RecipeDto} from "../../dtos/RecipeDto";
+import {IngredientDto} from "../../dtos/IngredientDto";
 
 @Component({
   selector: 'app-selected-recipe',
   templateUrl: './selected-recipe.component.html',
   styleUrls: ['./selected-recipe.component.css']
 })
-export class SelectedRecipeComponent implements OnInit {
+export class SelectedRecipeComponent implements OnInit, OnChanges {
+
+  @Input("recipe")
+  recipe: RecipeDto;
 
   @Output()
   recipeSelectedEmitter : EventEmitter<boolean> = new EventEmitter<boolean>();
 
   comments : any[];
 
-  ingredienten : any[];
+  ingredienten : IngredientDto[];
   relativeIngredientenList = [];
 
   personenCount = 2;
@@ -22,9 +28,17 @@ export class SelectedRecipeComponent implements OnInit {
 
   dislike = 0;
 
-  constructor() {
-    this.ingredienten = [{amount : 200, metric : "gram", name: "rijst"}, {amount : 1, metric : "eetlepel", name: "curry"}, {amount : 5, metric : "deciliter", name: "melk"}];
-    this.comments = [{name : "Matthias", message : "Dit is een goed recept"}, {name : "Marieke", message : "Kan beter"}, {name : "Lukas", message : "Beregoed!"}]
+  constructor(private router : Router) {
+    for(const ing of this.relativeIngredientenList){
+      ing.amount = ing.amount*this.personenCount;
+    }
+    if(localStorage.getItem("loginValidated") == null || localStorage.getItem("loginValidated") === "false") {
+      this.router.navigate(['/login']);
+    }
+
+  }
+
+  ngOnChanges(changes : SimpleChanges){
     this.resetIngredientList();
     for(const ing of this.relativeIngredientenList){
       ing.amount = ing.amount*this.personenCount;
@@ -32,6 +46,7 @@ export class SelectedRecipeComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   addPersonen(){
@@ -64,15 +79,16 @@ export class SelectedRecipeComponent implements OnInit {
   }
 
   resetIngredientList(){
+    this.ingredienten = this.recipe.ingredients;
     this.relativeIngredientenList = JSON.parse(JSON.stringify(this.ingredienten));
   }
 
   likeRecipe(){
-    this.like++;
+    this.recipe.upvotes++;
   }
 
   dislikeRecipe(){
-    this.dislike++;
+    this.recipe.downvotes++;
   }
 
   terug(){

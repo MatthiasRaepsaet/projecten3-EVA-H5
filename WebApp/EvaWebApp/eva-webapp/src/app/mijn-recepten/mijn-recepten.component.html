@@ -1,13 +1,19 @@
 <div class="container main" *ngIf="!recipeSelected">
   <div class="row">
-    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="mijnRecepten()" *ngIf="!mijnReceptenbool">Mijn recepten</a>
-    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="mijnRecepten()" *ngIf="mijnReceptenbool">Mijn recepten</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="mijnRecepten()"
+       *ngIf="!mijnReceptenbool">Mijn recepten</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="mijnRecepten()"
+       *ngIf="mijnReceptenbool">Mijn recepten</a>
 
-    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="favorieteRecepten()" *ngIf="!favoReceptenbool">Favoriete recepten</a>
-    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="favorieteRecepten()" *ngIf="favoReceptenbool">Favoriete recepten</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="favorieteRecepten()"
+       *ngIf="!favoReceptenbool">Favoriete recepten</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="favorieteRecepten()"
+       *ngIf="favoReceptenbool">Favoriete recepten</a>
 
-    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="receptZoeken()" *ngIf="!receptenZoekenbool">Recept zoeken</a>
-    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="receptZoeken()" *ngIf="receptenZoekenbool">Recept zoeken</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="receptZoeken()"
+       *ngIf="!receptenZoekenbool">Recept zoeken</a>
+    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="receptZoeken()"
+       *ngIf="receptenZoekenbool">Recept zoeken</a>
   </div>
   <div class="row z-depth-2 mydisplay">
 
@@ -43,58 +49,25 @@
 
     <div class="col s9 grey lighten-2 contentpart">
       <h1>Vegan1</h1>
-      <div class="row">
-        <div class="col s1"></div>
-        <div class="col s10 myrecipe z-depth-1" (click)="selectRecipe()">
-          <h2>Veganistisch recept1</h2>
-          <div class="row">
-            <p class="col s7">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis lacinia pharetra.
-              Sed sodales purus ipsum, non lobortis libero bibendum a. Aenean aliquam ex eu magna sagittis,
-              sed bibendum massa aliquet. Donec eu magna augue. Nulla et sodales purus, in faucibus purus.
-              Nulla in ante sit amet quam mattis blandit. Integer pretium libero risus. Sed vel rutrum enim,
-              a condimentum tellus. Etiam a risus elit. Pellentesque vitae congue purus, at pretium tellus.
-            </p>
-            <img src="http://d1nsg9ep31qa5b.cloudfront.net/wp-content/uploads/2016/05/10-tips-voor-veganistisch-eten-2-1024x768.jpg" class="responsive-img col s5">
+      <div *ngFor="let recipe of displayedRecipes">
+        <div class="row">
+          <div class="col s1"></div>
+          <div class="col s10 myrecipe z-depth-1" (click)="selectRecipe(recipe)">
+            <h2>{{recipe.title}}</h2>
+            <div class="row">
+              <p class="col s7">
+                {{recipe.description}}
+              </p>
+              <img
+                src="http://d1nsg9ep31qa5b.cloudfront.net/wp-content/uploads/2016/05/10-tips-voor-veganistisch-eten-2-1024x768.jpg"
+                class="responsive-img col s5">
+            </div>
           </div>
+          <div class="col s1"></div>
         </div>
-        <div class="col s1"></div>
-      </div>
-      <div class="row">
-        <div class="col s1"></div>
-        <div class="col s10 myrecipe z-depth-1" (click)="selectRecipe()">
-          <h2>Veganistisch recept2</h2>
-          <div class="row">
-            <p class="col s7">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis lacinia pharetra.
-              Sed sodales purus ipsum, non lobortis libero bibendum a. Aenean aliquam ex eu magna sagittis,
-              sed bibendum massa aliquet. Donec eu magna augue. Nulla et sodales purus, in faucibus purus.
-              Nulla in ante sit amet quam mattis blandit. Integer pretium libero risus. Sed vel rutrum enim,
-              a condimentum tellus. Etiam a risus elit. Pellentesque vitae congue purus, at pretium tellus.
-            </p>
-            <img src="http://d1nsg9ep31qa5b.cloudfront.net/wp-content/uploads/2016/05/10-tips-voor-veganistisch-eten-2-1024x768.jpg" class="responsive-img col s5">
-          </div>
-        </div>
-        <div class="col s1"></div>
-      </div>
-      <div class="row">
-        <div class="col s1"></div>
-        <div class="col s10 myrecipe z-depth-1" (click)="selectRecipe()">
-          <h2>Veganistisch recept3</h2>
-          <div class="row">
-            <p class="col s7">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis lacinia pharetra.
-              Sed sodales purus ipsum, non lobortis libero bibendum a. Aenean aliquam ex eu magna sagittis,
-              sed bibendum massa aliquet. Donec eu magna augue. Nulla et sodales purus, in faucibus purus.
-              Nulla in ante sit amet quam mattis blandit. Integer pretium libero risus. Sed vel rutrum enim,
-              a condimentum tellus. Etiam a risus elit. Pellentesque vitae congue purus, at pretium tellus.
-            </p>
-            <img src="http://d1nsg9ep31qa5b.cloudfront.net/wp-content/uploads/2016/05/10-tips-voor-veganistisch-eten-2-1024x768.jpg" class="responsive-img col s5">
-          </div>
-        </div>
-        <div class="col s1"></div>
       </div>
     </div>
   </div>
 </div>
-<app-selected-recipe (recipeSelectedEmitter)="selectedRecipeReceiver($event)" *ngIf="recipeSelected"></app-selected-recipe>
+<button (click)="test()">TEST</button>
+<app-selected-recipe (recipeSelectedEmitter)="selectedRecipeReceiver($event)" [recipe]="recipe" *ngIf="recipeSelected"></app-selected-recipe>

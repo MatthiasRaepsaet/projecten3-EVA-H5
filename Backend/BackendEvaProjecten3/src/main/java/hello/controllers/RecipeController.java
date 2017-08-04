@@ -39,7 +39,7 @@ public class RecipeController {
     @Autowired
     private IngredientRepository ingredientRepository;
 
-    @RequestMapping(path = "/getallrecipes")
+    @RequestMapping(path = "/getallrecipes", method = RequestMethod.GET)
     public Iterable<RecipeDto> getAllRecipes(){
         List<RecipeDto> recipeDtoList = new ArrayList<>();
         RecipeDto recipeDto;
@@ -67,13 +67,13 @@ public class RecipeController {
         return recipeDtoList;
     }
 
-    @RequestMapping(path = "/getcommentsforrecipe")
+    @RequestMapping(path = "/getcommentsforrecipe", method = RequestMethod.GET)
     public Iterable<Comment> getCommentsForRecipeId(@RequestParam long id){
         Iterable<Comment> resultList = recipeRepository.findOne(id).getComments();
         return resultList;
     }
 
-    @RequestMapping(path = "/addrecipe")
+    @RequestMapping(path = "/addrecipe", method = RequestMethod.POST)
     public void addNewRecipe(@RequestBody AddRecipeDto addRecipeDto){
         Recipe newRecipe = new Recipe();
         EvaUser user = evaUserRepository.findOne(addRecipeDto.getUserId());
@@ -89,7 +89,7 @@ public class RecipeController {
         evaUserRepository.save(user);
     }
 
-    @RequestMapping(path = "/getrecipebyid")
+    @RequestMapping(path = "/getrecipebyid", method = RequestMethod.GET)
     public Recipe getRecipeById(@RequestParam long id){
         return recipeRepository.findOne(id);
     }
@@ -106,14 +106,14 @@ public class RecipeController {
         recipeRepository.save(updatedRecipe);
     }
 
-    @RequestMapping(path = "/upvoterecipe")
+    @RequestMapping(path = "/upvoterecipe", method = RequestMethod.PUT)
     public void upvoteRecipe(@RequestParam long id){
         Recipe recipe = recipeRepository.findOne(id);
         recipe.setUpvotes(recipe.getUpvotes()+1);
         recipeRepository.save(recipe);
     }
 
-    @RequestMapping(path = "/downvoterecipe")
+    @RequestMapping(path = "/downvoterecipe", method = RequestMethod.PUT)
     public void downvoteRecipe(@RequestParam long id){
         Recipe recipe = recipeRepository.findOne(id);
         recipe.setDownvotes(recipe.getDownvotes()+1);

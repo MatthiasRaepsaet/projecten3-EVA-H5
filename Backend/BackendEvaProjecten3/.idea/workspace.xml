@@ -2,22 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6dfaa2b-a856-4beb-9daa-017ee3c13164" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/services/user/users.service.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/services/user/users.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_18_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_springfox_springfox_core_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_springfox_springfox_schema_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_springfox_springfox_spi_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_springfox_springfox_spring_web_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_springfox_springfox_swagger2_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_springfox_springfox_swagger_common_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_springfox_springfox_swagger_ui_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_swagger_swagger_annotations_1_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_swagger_swagger_models_1_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__joda_time_joda_time_2_9_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mapstruct_mapstruct_1_0_0_Beta4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_hateoas_spring_hateoas_0_23_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/hello/controllers/SwaggerConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/hello/dtos/RegisterDto.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/dtos/LoginDto.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/dtos/RegisterDto.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/hello/controllers/UserController.class" afterPath="$PROJECT_DIR$/build/classes/main/hello/controllers/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/hello/domain/EvaUser.class" afterPath="$PROJECT_DIR$/build/classes/main/hello/domain/EvaUser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/hello/domain/Ingredient.class" afterPath="$PROJECT_DIR$/build/classes/main/hello/domain/Ingredient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/BackendEva_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/BackendEva_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/BackendEva_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/BackendEva_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/application.properties" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BackendEva/application.properties" afterPath="$PROJECT_DIR$/out/production/BackendEva/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/controllers/ChallengeController.java" afterPath="$PROJECT_DIR$/src/main/java/hello/controllers/ChallengeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/controllers/CommentController.java" afterPath="$PROJECT_DIR$/src/main/java/hello/controllers/CommentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/controllers/RecipeController.java" afterPath="$PROJECT_DIR$/src/main/java/hello/controllers/RecipeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/hello/controllers/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/domain/EvaUser.java" afterPath="$PROJECT_DIR$/src/main/java/hello/domain/EvaUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/app.module.ts" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/domain/Ingredient.java" afterPath="$PROJECT_DIR$/src/main/java/hello/domain/Ingredient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/dtos/EvaUserDto.ts" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/dtos/EvaUserDto.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/login/login-component.ts" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/login/login-component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/main/main.component.html" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/main/main.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/main/main.component.ts" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/main/main.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/mijn-recepten.component.html" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/mijn-recepten.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/mijn-recepten.component.ts" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/mijn-recepten.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/selected-recipe/selected-recipe.component.css" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/selected-recipe/selected-recipe.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/selected-recipe/selected-recipe.component.html" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/selected-recipe/selected-recipe.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/selected-recipe/selected-recipe.component.ts" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/mijn-recepten/selected-recipe/selected-recipe.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/register/register.component.html" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/register/register.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/register/register.component.ts" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/register/register.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/index.html" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/services/user/users.service.ts" afterPath="$PROJECT_DIR$/../../WebApp/EvaWebApp/eva-webapp/src/app/services/user/users.service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -78,84 +111,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/Comment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EvaUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/EvaUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="50" column="100" lean-forward="false" selection-start-line="50" selection-start-column="100" selection-end-line="50" selection-end-column="100" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RecipeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/RecipeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="50" column="54" lean-forward="false" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3451#3452#0" expanded="false" />
-                <element signature="e#3502#3503#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecipeDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/dtos/RecipeDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            <state relative-caret-position="348">
+              <caret line="115" column="72" lean-forward="false" selection-start-line="115" selection-start-column="72" selection-end-line="115" selection-end-column="72" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddRecipeDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/dtos/AddRecipeDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#590#591#0" expanded="false" />
-                <element signature="e#618#619#0" expanded="false" />
-                <element signature="e#660#661#0" expanded="false" />
-                <element signature="e#694#695#0" expanded="false" />
-                <element signature="e#732#733#0" expanded="false" />
-                <element signature="e#766#767#0" expanded="false" />
-                <element signature="e#820#821#0" expanded="false" />
-                <element signature="e#866#867#0" expanded="false" />
-                <element signature="e#897#898#0" expanded="false" />
-                <element signature="e#926#927#0" expanded="false" />
-                <element signature="e#968#969#0" expanded="false" />
-                <element signature="e#1004#1005#0" expanded="false" />
-                <element signature="e#1052#1053#0" expanded="false" />
-                <element signature="e#1086#1087#0" expanded="false" />
-                <element signature="e#1150#1151#0" expanded="false" />
-                <element signature="e#1196#1197#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -163,20 +124,66 @@
       <file leaf-file-name="Recipe.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/Recipe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="272">
               <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Ingredient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/Ingredient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+              <folding>
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#644#645#0" expanded="true" />
+                <element signature="e#1034#1035#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
+                <element signature="e#1114#1115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="51" column="66" lean-forward="false" selection-start-line="51" selection-start-column="66" selection-end-line="51" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/CommentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+            <state relative-caret-position="306">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SwaggerConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/SwaggerConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,9 +194,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,11 +202,19 @@
       <file leaf-file-name="ChallengeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/ChallengeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="23" column="73" lean-forward="false" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -452,8 +465,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4497283591396" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="651261343" />
+        <entry key="$PROJECT_DIR$" value="4500024915768" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="2951731790" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -578,7 +591,6 @@
         <option value="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/domain/Greeting.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/controllers/GreetingController.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/hello/repositories/EvaUserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/repositories/CommentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/repositories/ChallengeRepository.java" />
@@ -588,19 +600,23 @@
         <option value="$PROJECT_DIR$/src/main/java/hello/dtos/AddCommentDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/domain/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/dtos/AddRecipeDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/domain/Ingredient.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/dtos/CommentDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/dtos/RecipeDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/controllers/IngredientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/dtos/LoginDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/controllers/ChallengeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/domain/Recipe.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/controllers/RecipeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/controllers/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/domain/EvaUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/dtos/RegisterDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/domain/Ingredient.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/controllers/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/controllers/ChallengeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/controllers/RecipeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/controllers/CommentController.java" />
       </list>
     </option>
   </component>
@@ -632,6 +648,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -660,6 +677,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -780,9 +801,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1239,11 +1259,13 @@
       <workItem from="1501662662570" duration="9510000" />
       <workItem from="1501744965824" duration="2380000" />
       <workItem from="1501747996153" duration="2521000" />
+      <workItem from="1501764024809" duration="402000" />
+      <workItem from="1501831582412" duration="8045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42221000" />
+    <option name="totallyTimeSpent" value="50668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1262,6 +1284,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39935064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1269,7 +1292,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20842217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21268657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24333334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1279,7 +1302,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1305,26 +1327,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/IngredientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/dtos/CommentDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1358,7 +1360,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1382,11 +1383,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1870">
           <caret line="110" column="38" lean-forward="false" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3451#3452#0" expanded="false" />
-            <element signature="e#3502#3503#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1412,7 +1409,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
+            <element signature="e#982#983#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1044#1045#0" expanded="false" />
+            <element signature="e#1076#1077#0" expanded="false" />
+            <element signature="e#1104#1105#0" expanded="false" />
+            <element signature="e#1146#1147#0" expanded="false" />
+            <element signature="e#1180#1181#0" expanded="false" />
+            <element signature="e#1218#1219#0" expanded="false" />
+            <element signature="e#1252#1253#0" expanded="false" />
+            <element signature="e#1306#1307#0" expanded="false" />
+            <element signature="e#1352#1353#0" expanded="false" />
+            <element signature="e#1400#1401#0" expanded="false" />
+            <element signature="e#1434#1435#0" expanded="false" />
+            <element signature="e#1498#1499#0" expanded="false" />
+            <element signature="e#1544#1545#0" expanded="false" />
+            <element signature="e#1575#1576#0" expanded="false" />
+            <element signature="e#1605#1606#0" expanded="false" />
+            <element signature="e#1648#1649#0" expanded="false" />
+            <element signature="e#1686#1687#0" expanded="false" />
+            <element signature="e#1719#1720#0" expanded="false" />
+            <element signature="e#1751#1752#0" expanded="false" />
+            <element signature="e#1798#1799#0" expanded="false" />
+            <element signature="e#1840#1841#0" expanded="false" />
+            <element signature="e#1885#1886#0" expanded="false" />
+            <element signature="e#1916#1917#0" expanded="false" />
+            <element signature="e#1974#1975#0" expanded="false" />
+            <element signature="e#2014#2015#0" expanded="false" />
+            <element signature="e#2047#2048#0" expanded="false" />
+            <element signature="e#2076#2077#0" expanded="false" />
+            <element signature="e#2120#2121#0" expanded="false" />
+            <element signature="e#2156#2157#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1508,7 +1539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1531,18 +1561,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/GreetingController.java" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/Greeting.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/GreetingController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/repositories/EvaUserRepository.java">
@@ -1616,14 +1638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/dtos/LoginDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/repositories/ChallengeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1635,35 +1649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/Ingredient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#606#607#0" expanded="false" />
-            <element signature="e#634#635#0" expanded="false" />
-            <element signature="e#665#666#0" expanded="false" />
-            <element signature="e#692#693#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
-            <element signature="e#794#795#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#864#865#0" expanded="false" />
-            <element signature="e#900#901#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1671,74 +1656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#590#591#0" expanded="false" />
-            <element signature="e#618#619#0" expanded="false" />
-            <element signature="e#660#661#0" expanded="false" />
-            <element signature="e#694#695#0" expanded="false" />
-            <element signature="e#732#733#0" expanded="false" />
-            <element signature="e#766#767#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#897#898#0" expanded="false" />
-            <element signature="e#926#927#0" expanded="false" />
-            <element signature="e#968#969#0" expanded="false" />
-            <element signature="e#1004#1005#0" expanded="false" />
-            <element signature="e#1052#1053#0" expanded="false" />
-            <element signature="e#1086#1087#0" expanded="false" />
-            <element signature="e#1150#1151#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/ChallengeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/IngredientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/RecipeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="50" column="54" lean-forward="false" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3451#3452#0" expanded="false" />
-            <element signature="e#3502#3503#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/Recipe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1747,13 +1664,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
+            <element signature="e#982#983#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+            <element signature="e#1044#1045#0" expanded="false" />
+            <element signature="e#1076#1077#0" expanded="false" />
+            <element signature="e#1104#1105#0" expanded="false" />
+            <element signature="e#1146#1147#0" expanded="false" />
+            <element signature="e#1180#1181#0" expanded="false" />
+            <element signature="e#1218#1219#0" expanded="false" />
+            <element signature="e#1252#1253#0" expanded="false" />
+            <element signature="e#1306#1307#0" expanded="false" />
+            <element signature="e#1352#1353#0" expanded="false" />
+            <element signature="e#1400#1401#0" expanded="false" />
+            <element signature="e#1434#1435#0" expanded="false" />
+            <element signature="e#1498#1499#0" expanded="false" />
+            <element signature="e#1544#1545#0" expanded="false" />
+            <element signature="e#1575#1576#0" expanded="false" />
+            <element signature="e#1605#1606#0" expanded="false" />
+            <element signature="e#1648#1649#0" expanded="false" />
+            <element signature="e#1686#1687#0" expanded="false" />
+            <element signature="e#1719#1720#0" expanded="false" />
+            <element signature="e#1751#1752#0" expanded="false" />
+            <element signature="e#1798#1799#0" expanded="false" />
+            <element signature="e#1840#1841#0" expanded="false" />
+            <element signature="e#1885#1886#0" expanded="false" />
+            <element signature="e#1916#1917#0" expanded="false" />
+            <element signature="e#1974#1975#0" expanded="false" />
+            <element signature="e#2014#2015#0" expanded="false" />
+            <element signature="e#2047#2048#0" expanded="false" />
+            <element signature="e#2076#2077#0" expanded="false" />
+            <element signature="e#2120#2121#0" expanded="false" />
+            <element signature="e#2156#2157#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/dtos/LoginDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/dtos/RegisterDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="e#1204#1205#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
+        <state relative-caret-position="17">
           <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding />
         </state>
@@ -1761,16 +1748,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/EvaUser.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-363">
+          <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/Recipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/domain/Ingredient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+          <folding>
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/ChallengeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" column="73" lean-forward="false" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/IngredientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/RecipeController.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
-          <caret line="50" column="100" lean-forward="false" selection-start-line="50" selection-start-column="100" selection-end-line="50" selection-end-column="100" />
+          <caret line="115" column="72" lean-forward="false" selection-start-line="115" selection-start-column="72" selection-end-line="115" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="416">
+          <caret line="51" column="66" lean-forward="false" selection-start-line="51" selection-start-column="66" selection-end-line="51" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/controllers/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding />
         </state>
       </provider>

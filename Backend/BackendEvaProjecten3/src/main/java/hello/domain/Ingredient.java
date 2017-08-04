@@ -16,13 +16,15 @@ public class Ingredient {
 
     private String name;
     private int amount;
+    private String metric;
 
     public Ingredient() {
     }
 
-    public Ingredient(String name, int amount) {
+    public Ingredient(String name, int amount, String metric) {
         this.name = name;
         this.amount = amount;
+        this.metric = metric;
     }
 
     public long getId() {
@@ -47,5 +49,13 @@ public class Ingredient {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public String getMetric() {
+        return metric;
+    }
+
+    public void setMetric(String metric) {
+        this.metric = metric;
     }
 }

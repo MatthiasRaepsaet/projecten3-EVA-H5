@@ -1,3 +1,4 @@
+import {RecipeDto} from "./RecipeDto";
 /**
  * Created by Matthias on 2/08/2017.
  */
@@ -9,4 +10,8 @@ export class EvaUserDto {
   username : string;
   password : string;
   score : number;
+  completedChallenges : any[];
+  todaysChallenges : any[];
+  myRecipes : RecipeDto[];
+  favoriteRecipes : RecipeDto[];
 }
