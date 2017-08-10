@@ -10,4 +10,29 @@
     <string name="welcome">Welkom bij EVA</string>
     <string name="btn_logout">afmelden</string>
     <string name="name">Naam</string>
+    <string name="title_activity_menu_drawer">MenuDrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_overEVA">Over EVA</string>
+    <string name="nav_vegvsVeg">Vegetarisme vs Veganisme</string>
+    <string name="nav_challenges">Challenges</string>
+    <string name="nav_uitleg">Uitleg</string>
+    <string name="nav_profiel">Profiel</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item>Over EVA</item>
+        <item>Vegetarisme vs Veganisme</item>
+        <item>Challenges</item>
+        <item>Uitleg</item>
+        <item>Profiel</item>
+    </string-array>
+
+    <string name="action_logout">Afmelden</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
