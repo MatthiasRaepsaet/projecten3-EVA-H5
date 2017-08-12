@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import  be.hogent.Eva2017g5.EVAH5.ui.fragments.*;
+import be.hogent.Eva2017g5.R;
 
 public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;

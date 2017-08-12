@@ -24,6 +24,7 @@ import java.util.Map;
 import be.hogent.Eva2017g5.EVAH5.domain.SessionManager;
 import be.hogent.Eva2017g5.EVAH5.domain.AppConfig;
 import be.hogent.Eva2017g5.EVAH5.domain.AppController;
+import be.hogent.Eva2017g5.R;
 
 public class LoginActivity extends Activity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
