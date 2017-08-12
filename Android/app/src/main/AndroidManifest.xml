@@ -1,33 +1,22 @@
-<<<<<<< Original<<<<<<< Original<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="be.sofie.eva">
-<uses-permission android:name="android.permission.INTERNET">
-<application
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="be.hogent.Eva2017g5">
 
-    android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name"
-    android:supportsRtl="true" android:theme="@style/AppTheme">
-    <activity android:name=".eva.ui.LoginActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="be.hogent.Eva2017g5.ui.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-    <activity android:name=".eva.ui.MainActivity" />
-    <activity android:name=".eva.ui.RegisterActivity"></activity>
-</application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="be.hogent.Eva2017g5.ui.MainActivity" />
+        <activity android:name="be.hogent.Eva2017g5.ui.RegisterActivity"></activity>
+    </application>
 
-</manifest>=======<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-<application>
-    <activity android:name="be.sofie.eva.eva.ui.MenuDrawerActivity" android:label="@string/title_activity_menu_drawer"
-        android:theme="@style/AppTheme.NoActionBar"></activity>
-</application>
-</manifest>>>>>>>> Added
-
-    =======<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-<application>
-    <activity android:name="be.sofie.eva.eva.ui.MainActivity" android:label="@string/title_activity_main2"
-        android:theme="@style/AppTheme.NoActionBar"></activity>
-</application>
-</manifest>>>>>>>> Added
+</manifest>
