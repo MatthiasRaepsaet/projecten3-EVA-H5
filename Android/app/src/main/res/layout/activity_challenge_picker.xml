@@ -1,9 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="be.hogent.Eva2017g5.EVAH5.ui.ChallengePicker">
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="be.hogent.Eva2017g5.EVAH5.ui.ChallengePickerActivity"
+        tools:layout_editor_absoluteY="81dp"
+        tools:layout_editor_absoluteX="0dp">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/challengePickerFragmentContainer"
+            android:layout_width="368dp"
+            android:layout_height="495dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/dayCounterTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/daysTextView"
+                            android:layout_alignBottom="@+id/daysTextView"
+                            android:layout_margin="10dp"
+                            android:layout_marginEnd="23dp"
+                            android:layout_toStartOf="@+id/daysTextView"
+                            android:text="@string/currentDay"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp" />
+
+                        <ToggleButton
+                            android:id="@+id/recipeToggleButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dayCounterTextView"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/Recipe"
+                            android:textOff="@string/Recipe"
+                            android:textOn="@string/Recipe"
+                            tools:text="@string/Recipe" />
+
+                        <ToggleButton
+                            android:id="@+id/restaurantToggleButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/recipeToggleButton"
+                            android:layout_toStartOf="@+id/recipeToggleButton"
+                            android:text="ToggleButton"
+                            android:textOff="@string/Restaurant"
+                            android:textOn="@string/Restaurant" />
+
+                        <ToggleButton
+                            android:id="@+id/quizToggleButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/recipeToggleButton"
+                            android:layout_toEndOf="@+id/recipeToggleButton"
+                            android:checked="false"
+                            android:text="ToggleButton"
+                            android:textOff="@string/Quiz"
+                            android:textOn="@string/Quiz" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </GridLayout>
+
+            <FrameLayout
+                android:id="@+id/challengeHolder"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>

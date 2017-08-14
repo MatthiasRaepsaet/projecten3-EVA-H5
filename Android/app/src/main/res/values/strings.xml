@@ -40,4 +40,26 @@
 
     <string name="openDrawer">open_drawer</string>
     <string name="closeDrawer">close_drawer</string>
+
+    <!--homeactivity strings-->
+    <string name="dareCountdown1">Al</string>
+    <string name="dareCountdown2">dagen vegan!</string>
+    <string name="restartDare">herstarten?</string>
+    <string name="currentDay">Dag %d.</string>
+    <string name="challengeComplete">Opdracht Volbracht!</string>
+    <string name="chooseChallenge">Kies een uitdaging!</string>
+    <string name="co2saved">%d kg CO2 </string>
+    <string name="waterSaved">%dl water</string>
+    <string name="forestSaved">%.2f m2 Bos</string>
+    <string name="restartChallenge">Vegan Challenge herstarten</string>
+    <string name="confirmRestartChallengeMessage">Weet u zeker dat u de challenge wil herstarten? alle vooruitgang zal worden verwijderd!</string>
+    <string name="ok">ok</string>
+    <string name="cancel">Annuleer</string>
+    <string name="Recipe">recept</string>
+    <string name="Quiz">quiz</string>
+    <string name="Restaurant">restaurant</string>
+    <string name="quizPickerTitle">Quiz</string>
+    <string name="quizPickerBody">Heb je weinig tijd vandaag, om een nieuw recept uit te proberen of op restaurant te gaan, doe deze korte quiz en leer weetjes de impact van vlees op de wereld en jouw lichaam.</string>
+    <string name="confirm">bevestig</string>
+
 </resources>
