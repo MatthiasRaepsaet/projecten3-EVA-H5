@@ -1,32 +1,29 @@
 package be.hogent.Eva2017g5.EVAH5.ui.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import be.hogent.Eva2017g5.EVAH5.domain.VeganChallenge;
+import be.hogent.Eva2017g5.EVAH5.ui.ChallengePickerActivity;
 import be.hogent.Eva2017g5.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link ChallengeSummaryFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link ChallengeSummaryFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ChallengeSummaryFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
+    private VeganChallenge veganChallenge;
+
+    public void setVeganChallenge(VeganChallenge veganChallenge) {
+        this.veganChallenge = veganChallenge;
+    }
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
@@ -34,20 +31,12 @@ public class ChallengeSummaryFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ChallengeSummaryFragment.
-     */
+
     // TODO: Rename and change types and number of parameters
     public static ChallengeSummaryFragment newInstance(String param1, String param2) {
         ChallengeSummaryFragment fragment = new ChallengeSummaryFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -55,17 +44,23 @@ public class ChallengeSummaryFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+        //onclicklistener for launching challengepicker
+
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_challenge_summary, container, false);
+        View v = inflater.inflate(R.layout.fragment_challenge_summary, container, false);
+
+
+
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -84,6 +79,23 @@ public class ChallengeSummaryFragment extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        final Button btn = (Button) getView().findViewById(R.id.challengePickerLauncherButton);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),ChallengePickerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView daysTV = (TextView) getView().findViewById(R.id.currentDayTextView);
+        daysTV.setText(String.format(getString(R.string.currentDay), veganChallenge.getDaysSinceStart()));
+
     }
 
     @Override

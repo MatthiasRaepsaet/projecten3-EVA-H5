@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * Created by chaitanya on 8/13/17.
  */
 
-public class VeganDare {
+public class VeganChallenge {
 
     //properties
 
@@ -22,9 +22,10 @@ public class VeganDare {
     private int quizzesTaken;
 
     private List<Challenge> challengesList;
+    private Challenge currentChallenge;
 
     //constructor
-    public VeganDare() {
+    public VeganChallenge() {
         this.startDate = Calendar.getInstance().getTime();
         this.recipesMade = 0;
         this.restaurantsVisited = 0;
@@ -38,6 +39,10 @@ public class VeganDare {
 
     public Date getStartDate() {
         return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
     public int getRecipesMade() {
@@ -57,7 +62,6 @@ public class VeganDare {
     public int getQuizzesTaken() {
         return quizzesTaken;
     }
-
     public void setQuizzesTaken(int quizzesTaken) {
         this.quizzesTaken = quizzesTaken;
     }
@@ -65,13 +69,22 @@ public class VeganDare {
     public List<Challenge> getChallengesList() {
         return challengesList;
     }
+    public void setChallengesList(List<Challenge> challengesList) {
+        this.challengesList = challengesList;
+    }
+
+    public Challenge getCurrentChallenge() {
+        return currentChallenge;
+    }
+    public void setCurrentChallenge(Challenge currentChallenge) {
+        this.currentChallenge = currentChallenge;
+    }
 
     //add to and remove from list
 
     public void addChallenge(Challenge c){
         challengesList.add(c);
     }
-
     public void removeChallenge(Challenge c){
         for (int i = 0; i < challengesList.size(); i++) {
             Challenge x = challengesList.get(i);
@@ -111,11 +124,9 @@ public class VeganDare {
         return getDaysSinceStart()*4164;
 
     }
-
     public int getCarbonReduced() {
         return getDaysSinceStart()*20;
     }
-
     public double getForestSaved(){
         return getDaysSinceStart()*2.79;
     }

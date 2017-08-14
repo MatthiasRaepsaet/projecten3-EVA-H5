@@ -5,4 +5,8 @@ package be.hogent.Eva2017g5.EVAH5.domain;
  */
 
 public class QuizChallenge extends Challenge {
+    @Override
+    public boolean isCompleted() {
+        return false;
+    }
 }
