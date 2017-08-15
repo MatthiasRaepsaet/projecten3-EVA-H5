@@ -1,52 +1,44 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToPadding="false"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+
     android:padding="5dp"
-    tools:context="be.hogent.Eva2017g5.EVAH5.ui.fragments.ChallengeSummaryFragment"
-    tools:showIn="@layout/activity_home">
+    app:cardElevation="3dp"
+    tools:context="be.hogent.Eva2017g5.EVAH5.ui.fragments.LaunchChallengePickerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <android.support.v7.widget.CardView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent">
 
-        app:cardElevation="3dp">
-
-        <RelativeLayout
+        <TextView
+            android:id="@+id/currentDayTextView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="@string/currentDay"
+            android:textSize="20sp"
+            tools:text="@string/currentDay" />
 
-            <TextView
-                android:id="@+id/currentDayTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:gravity="center"
-                android:text="@string/currentDay"
-                android:textSize="20sp"
-                tools:text="@string/currentDay" />
+        <Button
+            android:id="@+id/challengePickerLauncherButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currentDayTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:text="@string/chooseChallenge" />
 
-            <Button
-                android:id="@+id/challengePickerLauncherButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/currentDayTextView"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
-                android:text="@string/chooseChallenge" />
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/challengePickerLauncherButton"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="@string/challengeComplete" />
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-</FrameLayout>
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/challengePickerLauncherButton"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/challengeComplete" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
