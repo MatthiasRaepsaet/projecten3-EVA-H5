@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import be.hogent.Eva2017g5.R;
 
@@ -55,6 +56,23 @@ public class QuizPickerFragment extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        Button pickQuiz = (Button) getView().findViewById(R.id.pickQuizBtn);
+        pickQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO: create new quiz challenge object
+
+                //TODO: add challenge to challenglist
+
+                //TODO: go back to homeActivity
+            }
+        });
     }
 
     @Override

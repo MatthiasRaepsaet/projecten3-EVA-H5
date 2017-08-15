@@ -8,15 +8,33 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="be.hogent.Eva2017g5.EVAH5.ui.LoginActivity" >
+
+        <!-- <activity android:name="be.hogent.Eva2017g5.EVAH5.ui.LoginActivity" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity android:name=".EVAH5.ui.MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".EVAH5.ui.RegisterActivity" />
+        <activity android:name=".EVAH5.ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="be.hogent.Eva2017g5.EVAH5.ui.MainActivity" />
-        <activity android:name="be.hogent.Eva2017g5.EVAH5.ui.RegisterActivity"></activity>
+        <activity android:name=".EVAH5.ui.ChallengePickerActivity" />
     </application>
 
 </manifest>
