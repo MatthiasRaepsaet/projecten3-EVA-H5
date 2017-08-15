@@ -5,11 +5,15 @@ package be.hogent.Eva2017g5.EVAH5.ui;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -21,11 +25,11 @@ import java.util.List;
 
 import be.hogent.Eva2017g5.EVAH5.domain.Challenge;
 import be.hogent.Eva2017g5.EVAH5.domain.VeganChallenge;
-import be.hogent.Eva2017g5.EVAH5.ui.fragments.LaunchChallengePickerFragment;
+import be.hogent.Eva2017g5.EVAH5.ui.fragments.ChallengeSummaryFragment;
 import be.hogent.Eva2017g5.EVAH5.ui.fragments.StatsFragment;
 import be.hogent.Eva2017g5.R;
 
-public class HomeActivity extends AppCompatActivity implements LaunchChallengePickerFragment.OnFragmentInteractionListener{
+public class HomeActivity extends AppCompatActivity implements ChallengeSummaryFragment.OnFragmentInteractionListener{
 
 
     VeganChallenge veganChallenge;
@@ -43,15 +47,11 @@ public class HomeActivity extends AppCompatActivity implements LaunchChallengePi
         FragmentManager fragmentManager = getSupportFragmentManager();
         android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        //TODO: check challengeList, load appropriate fragment: if no challenge for today, LaunchChallengePickerFragment,
-        if(veganChallenge.getCurrentChallenge() == null){
-            //add LanunchChallengePickerFragment
-            final LaunchChallengePickerFragment challengeSummaryFrag = new LaunchChallengePickerFragment();
-            challengeSummaryFrag.setVeganChallenge(veganChallenge);
-            fragmentTransaction.add(R.id.challengeSummaryHolder, challengeSummaryFrag);
-        } else {
-            //check for challenge type
-        }
+        //add Challenge Summary fragment
+        final ChallengeSummaryFragment challengeSummaryFrag = new ChallengeSummaryFragment();
+        challengeSummaryFrag.setVeganChallenge(veganChallenge);
+        fragmentTransaction.add(R.id.challengeSummaryHolder, challengeSummaryFrag);
+
         //add StatsFragment
         final StatsFragment statsFragment = new StatsFragment();
         statsFragment.setVeganChallenge(veganChallenge);

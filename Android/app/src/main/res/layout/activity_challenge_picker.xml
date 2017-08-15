@@ -18,9 +18,7 @@
 
             <GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="0dp">
+                android:layout_height="match_parent">
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
@@ -85,10 +83,10 @@
             <FrameLayout
                 android:id="@+id/challengeHolder"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
             </FrameLayout>
 
         </LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>

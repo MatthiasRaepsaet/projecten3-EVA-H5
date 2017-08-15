@@ -4,13 +4,12 @@ android {
     compileSdkVersion 24
     buildToolsVersion '25.0.0'
     defaultConfig {
-        applicationId "be.hogent.Eva2017g5"
+        applicationId "be.sofie.eva"
         minSdkVersion 17
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -53,7 +52,5 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.1.2'
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
-    compile 'com.android.support:cardview-v7:24.2.1'
-    compile 'com.android.support:gridlayout-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 }

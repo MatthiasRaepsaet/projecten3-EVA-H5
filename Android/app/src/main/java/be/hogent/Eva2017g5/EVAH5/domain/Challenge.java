@@ -13,11 +13,4 @@ public abstract class Challenge {
 
     public abstract boolean isCompleted();
 
-    public Date getChallengeDate() {
-        return challengeDate;
-    }
-
-    public void setChallengeDate(Date challengeDate) {
-        this.challengeDate = challengeDate;
-    }
 }

@@ -21,16 +21,15 @@ import java.util.List;
 import be.hogent.Eva2017g5.EVAH5.domain.Challenge;
 import be.hogent.Eva2017g5.EVAH5.domain.VeganChallenge;
 import be.hogent.Eva2017g5.EVAH5.ui.fragments.QuizPickerFragment;
-import be.hogent.Eva2017g5.EVAH5.ui.fragments.RecipePickerFragment;
-import be.hogent.Eva2017g5.EVAH5.ui.fragments.RestaurantPickerFragment;
 import be.hogent.Eva2017g5.R;
 
-public class ChallengePickerActivity extends AppCompatActivity implements QuizPickerFragment.OnFragmentInteractionListener, RecipePickerFragment.OnFragmentInteractionListener, RestaurantPickerFragment.OnFragmentInteractionListener{
+public class ChallengePickerActivity extends AppCompatActivity implements QuizPickerFragment.OnFragmentInteractionListener{
 
     //fields
     VeganChallenge veganChallenge;
 
     //custom methods
+
     public void persistVeganChallenge(){
         // save veganChallenge in sharedpref
         SharedPreferences sharedPref = getSharedPreferences("veganChallenge", MODE_PRIVATE);
@@ -63,6 +62,7 @@ public class ChallengePickerActivity extends AppCompatActivity implements QuizPi
         veganChallenge.setChallengesList(challengesList);
     }
 
+
     //lifecylce methods
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,14 +84,6 @@ public class ChallengePickerActivity extends AppCompatActivity implements QuizPi
                 btnRecipes.setChecked(true);
                 btnRestaurant.setChecked(false);
                 btnQuiz.setChecked(false);
-
-                //load RestaurantFragment
-                FragmentManager fm = getSupportFragmentManager();
-                RestaurantPickerFragment fragment = (RestaurantPickerFragment) fm.findFragmentByTag("RESTAURANTFRAGMENT");
-                if(fragment == null){
-                    fragment = new RestaurantPickerFragment();
-                    fm.beginTransaction().replace(R.id.challengeHolder, fragment, "RESTAURANTFRAGMENT").commit();
-                }
             }
         });
         btnRestaurant.setOnClickListener(new View.OnClickListener() {
@@ -101,14 +93,6 @@ public class ChallengePickerActivity extends AppCompatActivity implements QuizPi
                 btnRestaurant.setChecked(true);
                 btnRecipes.setChecked(false);
                 btnQuiz.setChecked(false);
-
-                //load RecipeFragment
-                FragmentManager fm = getSupportFragmentManager();
-                RecipePickerFragment fragment = (RecipePickerFragment) fm.findFragmentByTag("RECIPEFRAGMENT");
-                if(fragment == null){
-                    fragment = new RecipePickerFragment();
-                    fm.beginTransaction().replace(R.id.challengeHolder, fragment, "RECIPEFRAGMENT").commit();
-                }
             }
         });
         btnQuiz.setOnClickListener(new View.OnClickListener() {
@@ -120,15 +104,17 @@ public class ChallengePickerActivity extends AppCompatActivity implements QuizPi
                 btnRecipes.setChecked(false);
                 btnRestaurant.setChecked(false);
 
-                //load Quizfragment
+                //load fragment
+
                 FragmentManager fm = getSupportFragmentManager();
-                QuizPickerFragment fragment = (QuizPickerFragment) fm.findFragmentByTag("QUIZFRAGMENT");
-                if(fragment == null){
-                    fragment = new QuizPickerFragment();
-                    fm.beginTransaction().replace(R.id.challengeHolder, fragment, "QUIZFRAGMENT").commit();
+                QuizPickerFragment qpf = (QuizPickerFragment) fm.findFragmentByTag("QUIZFRAGMENT");
+                if(qpf == null){
+                    qpf = new QuizPickerFragment();
+                    fm.beginTransaction().replace(R.id.challengeHolder, qpf, "QUIZFRAGMENT").commit();
                 }
             }
         });
+
     }
 
     @Override
@@ -138,6 +124,7 @@ public class ChallengePickerActivity extends AppCompatActivity implements QuizPi
         TextView daysTV = (TextView) findViewById(R.id.dayCounterTextView);
         daysTV.setText(String.format(getString(R.string.currentDay),veganChallenge.getDaysSinceStart()));
     }
+
 
     @Override
     public void onFragmentInteraction(Uri uri) {
