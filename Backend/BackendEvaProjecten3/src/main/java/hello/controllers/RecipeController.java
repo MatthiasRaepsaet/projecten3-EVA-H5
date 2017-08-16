@@ -4,10 +4,7 @@ import hello.domain.Comment;
 import hello.domain.EvaUser;
 import hello.domain.Ingredient;
 import hello.domain.Recipe;
-import hello.dtos.AddCommentDto;
-import hello.dtos.AddRecipeDto;
-import hello.dtos.CommentDto;
-import hello.dtos.RecipeDto;
+import hello.dtos.*;
 import hello.repositories.CommentRepository;
 import hello.repositories.EvaUserRepository;
 import hello.repositories.IngredientRepository;
@@ -89,6 +86,14 @@ public class RecipeController {
         evaUserRepository.save(user);
     }
 
+    @RequestMapping(path = "/favoriterecipe", method = RequestMethod.POST)
+    public void addFavorite(@RequestBody RecipeUserDto recipeUser){
+        EvaUser user = evaUserRepository.findOne(recipeUser.getUserId());
+        Recipe recipe = recipeRepository.findOne(recipeUser.getRecipeId());
+        user.getFavoriteRecipes().add(recipe);
+        evaUserRepository.save(user);
+    }
+
     @RequestMapping(path = "/getrecipebyid", method = RequestMethod.GET)
     public Recipe getRecipeById(@RequestParam long id){
         return recipeRepository.findOne(id);
@@ -118,5 +123,34 @@ public class RecipeController {
         Recipe recipe = recipeRepository.findOne(id);
         recipe.setDownvotes(recipe.getDownvotes()+1);
         recipeRepository.save(recipe);
+    }
+
+    @RequestMapping(path="/getfavoriterecipes", method = RequestMethod.GET)
+    public Iterable<RecipeDto> getFavoriteRecipes(@RequestParam long userId){
+        EvaUser user = evaUserRepository.findOne(userId);
+        List<RecipeDto> recipeDtoList = new ArrayList<>();
+        RecipeDto recipeDto;
+        CommentDto commentDto;
+        for(Recipe recipe : user.getFavoriteRecipes()){
+            recipeDto = new RecipeDto();
+            recipeDto.setId(recipe.getId());
+            recipeDto.setTitle(recipe.getTitle());
+            recipeDto.setAuthor(recipe.getAuthorName());
+            recipeDto.setDescription(recipe.getDescription());
+            recipeDto.setDownvotes(recipe.getDownvotes());
+            recipeDto.setUpvotes(recipe.getUpvotes());
+            recipeDto.setIngredients(recipe.getIngredients());
+            for(Comment comment: recipe.getComments()){
+                commentDto = new CommentDto();
+                commentDto.setId(comment.getId());
+                commentDto.setAuthor(comment.getAuthor().getUsername());
+                commentDto.setMessage(comment.getMessage());
+                commentDto.setDownvotes(comment.getDownvotes());
+                commentDto.setUpvotes(comment.getUpvotes());
+                recipeDto.getComments().add(commentDto);
+            }
+            recipeDtoList.add(recipeDto);
+        }
+        return recipeDtoList;
     }
 }
