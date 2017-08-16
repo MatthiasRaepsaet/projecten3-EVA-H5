@@ -17,13 +17,4 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
-  getUser(){
-    console.log(JSON.parse(localStorage.getItem("myUser")));
-  }
-
-  logout(){
-    localStorage.setItem("loginValidated", "false");
-    localStorage.setItem("myUser", null);
-    this.router.navigate(['/login']);
-  }
 }

@@ -1,59 +1,68 @@
 <div class="container main" *ngIf="!recipeSelected">
   <div class="row">
-    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="mijnRecepten()"
+    <a class="waves-effect waves-light btn col s3 receptbutton green" (click)="mijnRecepten()"
        *ngIf="!mijnReceptenbool">Mijn recepten</a>
-    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="mijnRecepten()"
+    <a class="waves-effect waves-light btn col s3 receptbutton light-green" (click)="mijnRecepten()"
        *ngIf="mijnReceptenbool">Mijn recepten</a>
 
-    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="favorieteRecepten()"
+    <a class="waves-effect waves-light btn col s3 receptbutton green" (click)="favorieteRecepten()"
        *ngIf="!favoReceptenbool">Favoriete recepten</a>
-    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="favorieteRecepten()"
+    <a class="waves-effect waves-light btn col s3 receptbutton light-green" (click)="favorieteRecepten()"
        *ngIf="favoReceptenbool">Favoriete recepten</a>
 
-    <a class="waves-effect waves-light btn col s4 receptbutton green" (click)="receptZoeken()"
+    <a class="waves-effect waves-light btn col s3 receptbutton green" (click)="receptZoeken()"
        *ngIf="!receptenZoekenbool">Recept zoeken</a>
-    <a class="waves-effect waves-light btn col s4 receptbutton light-green" (click)="receptZoeken()"
+    <a class="waves-effect waves-light btn col s3 receptbutton light-green" (click)="receptZoeken()"
        *ngIf="receptenZoekenbool">Recept zoeken</a>
+
+    <a class="waves-effect waves-light btn col s3 receptbutton green" (click)="receptToevoegen()"
+       *ngIf="!receptToevoegenbool">Recept toevoegen</a>
+    <a class="waves-effect waves-light btn col s3 receptbutton light-green" (click)="receptToevoegen()"
+       *ngIf="receptToevoegenbool">Recept toevoegen</a>
   </div>
-  <div class="row z-depth-2 mydisplay">
+  <div class="row z-depth-2 mydisplay" *ngIf="!receptToevoegenbool">
 
     <div class="col s3 lime sidenavbar">
       <h2>Category</h2>
       <div class="categorylist">
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green">Vegan1</a>
+          <a class="waves-effect waves-light btn green" (click)="fruit()">Fruit</a>
           <br>
         </div>
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green">Vegan2</a>
+          <a class="waves-effect waves-light btn green" (click)="flex()">Flex</a>
           <br>
         </div>
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green">Vegan3</a>
+          <a class="waves-effect waves-light btn green" (click)="noten()">Noten</a>
           <br>
         </div>
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green">Vegan4</a>
+          <a class="waves-effect waves-light btn green" (click)="tofu()">Tofu</a>
           <br>
         </div>
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green">Vegan5</a>
+          <a class="waves-effect waves-light btn green" (click)="desserts()">Desserts</a>
           <br>
         </div>
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green">Vegan6</a>
+          <a class="waves-effect waves-light btn green" (click)="alles()">Alle recepten</a>
           <br>
         </div>
       </div>
     </div>
 
     <div class="col s9 grey lighten-2 contentpart">
-      <h1>Vegan1</h1>
+      <h1>{{currentCat}}</h1>
       <div *ngFor="let recipe of displayedRecipes">
         <div class="row">
           <div class="col s1"></div>
           <div class="col s10 myrecipe z-depth-1" (click)="selectRecipe(recipe)">
-            <h2>{{recipe.title}}</h2>
+            <div class="row">
+              <div class="col s6"><h2>{{recipe.title}}</h2></div>
+              <div class="col s4"></div>
+              <div class="col s2"></div>
+            </div>
             <div class="row">
               <p class="col s7">
                 {{recipe.description}}
@@ -68,6 +77,6 @@
       </div>
     </div>
   </div>
+  <app-add-recipe *ngIf="receptToevoegenbool"></app-add-recipe>
 </div>
-<button (click)="test()">TEST</button>
 <app-selected-recipe (recipeSelectedEmitter)="selectedRecipeReceiver($event)" [recipe]="recipe" *ngIf="recipeSelected"></app-selected-recipe>

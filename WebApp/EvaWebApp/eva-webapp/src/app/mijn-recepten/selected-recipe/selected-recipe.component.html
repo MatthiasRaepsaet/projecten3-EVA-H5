@@ -2,6 +2,8 @@
   <div class="white recipedisplay z-depth-2">
     <div class="row" style="margin-left: 10px">
       <h3 class="col s5">{{recipe.title}}</h3>
+      <div class="col s1"></div>
+      <div class="col s2"><i class="material-icons medium favButton" (click)="addToFavorite(recipe)">favorite</i></div>
       <div class="personenwidget">
         <div class="col s1"></div>
         <div class="col s3 inner">

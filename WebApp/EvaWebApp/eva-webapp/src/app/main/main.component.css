@@ -8,3 +8,22 @@
   flex: 1 0 auto;
   padding-top: 20px;
 }
+
+.mainContent {
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background-color: #e8e8e8;
+}
+
+h5 {
+  margin-left: 15px;
+}
+
+p {
+  margin: 15px;
+}
+
+.evaImg {
+  margin: auto;
+  display: block
+}

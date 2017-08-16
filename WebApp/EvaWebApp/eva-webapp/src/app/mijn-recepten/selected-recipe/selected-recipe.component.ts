@@ -2,6 +2,8 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
 import {Router} from "@angular/router";
 import {RecipeDto} from "../../dtos/RecipeDto";
 import {IngredientDto} from "../../dtos/IngredientDto";
+import {RecipesService} from "../../services/recipes.service";
+import {RecipeUserDto} from "../../dtos/RecipeUserDto";
 
 @Component({
   selector: 'app-selected-recipe',
@@ -16,19 +18,13 @@ export class SelectedRecipeComponent implements OnInit, OnChanges {
   @Output()
   recipeSelectedEmitter : EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  comments : any[];
-
   ingredienten : IngredientDto[];
   relativeIngredientenList = [];
 
   personenCount = 2;
   singleMulti = "personen";
 
-  like = 0;
-
-  dislike = 0;
-
-  constructor(private router : Router) {
+  constructor(private router : Router, private recipeService : RecipesService) {
     for(const ing of this.relativeIngredientenList){
       ing.amount = ing.amount*this.personenCount;
     }
@@ -94,5 +90,12 @@ export class SelectedRecipeComponent implements OnInit, OnChanges {
   terug(){
     console.log("terug");
     this.recipeSelectedEmitter.emit(false);
+  }
+
+  addToFavorite(recipe){
+    let favRec : RecipeUserDto = new RecipeUserDto;
+    favRec.userId = JSON.parse(localStorage.getItem("myUser")).id;
+    favRec.recipeId = this.recipe.id;
+    this.recipeService.addFavoriteRecipe(favRec).subscribe();
   }
 }

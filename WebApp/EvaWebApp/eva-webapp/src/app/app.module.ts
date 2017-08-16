@@ -14,6 +14,7 @@ import { AlertComponent } from './alert/alert.component';
 import {RecipesService} from "./services/recipes.service";
 import { SelectedRecipeComponent } from './mijn-recepten/selected-recipe/selected-recipe.component';
 import {UsersService} from "./services/user/users.service";
+import { AddRecipeComponent } from './mijn-recepten/add-recipe/add-recipe/add-recipe.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,16 @@ import {UsersService} from "./services/user/users.service";
     MijnReceptenComponent,
     InfoComponent,
     AlertComponent,
-    SelectedRecipeComponent
+    SelectedRecipeComponent,
+    AddRecipeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
+      {
+        path: 'info',
+        component: InfoComponent
+      },
       {
         path: 'login',
         component: LoginComponent

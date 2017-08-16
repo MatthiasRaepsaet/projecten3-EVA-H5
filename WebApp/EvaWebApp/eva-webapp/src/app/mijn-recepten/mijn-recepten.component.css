@@ -18,6 +18,7 @@
 .catbutton > a{
   margin-top: 5px;
   margin-bottom: 5px;
+  width: 150px;
 }
 
 .myrecipe {
@@ -30,4 +31,5 @@
 .myrecipe:hover {
   background-color: #e8e8e8;
 }
+
 

@@ -12,17 +12,19 @@ import {EvaUserDto} from "../dtos/EvaUserDto";
 export class LoginComponent implements OnInit {
 
   evaUser : EvaUserDto = new EvaUserDto;
+  showHeaderFooter : boolean;
 
   showAlert = true;
   usersService;
 
   constructor(private router : Router, usersService : UsersService) {
     this.usersService = usersService;
-    console.log(JSON.parse(localStorage.getItem("myUser")));
-    console.log(localStorage.getItem("loginValidated"));
   }
 
   ngOnInit() {
+    this.showHeaderFooter = false;
+    localStorage.setItem("myUser", null);
+    localStorage.setItem("loginValidated", "false");
   }
 
   login(username: string, password: string){
@@ -31,6 +33,8 @@ export class LoginComponent implements OnInit {
     this.usersService.loginUser(userLogin).subscribe(result => {
       this.evaUser = result;
       if(this.evaUser.id !== 0){
+        this.showHeaderFooter = true;
+        console.log(this.showHeaderFooter);
         this.router.navigate(['/home']);
         console.log(JSON.parse(localStorage.getItem("myUser")));
         localStorage.setItem("myUser", JSON.stringify(this.evaUser));

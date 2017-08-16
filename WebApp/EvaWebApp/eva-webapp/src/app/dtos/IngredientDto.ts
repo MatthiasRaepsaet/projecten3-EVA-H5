@@ -4,5 +4,6 @@
 export class IngredientDto {
   id : number;
   name : string;
+  metric : string;
   amount : number;
 }

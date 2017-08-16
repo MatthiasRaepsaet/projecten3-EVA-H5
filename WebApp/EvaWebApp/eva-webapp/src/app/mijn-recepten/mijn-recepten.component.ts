@@ -16,6 +16,8 @@ export class MijnReceptenComponent implements OnInit {
 
   recipe : RecipeDto;
 
+  currentCat : string ;
+
   myRecipe: AddRecipeDto;
 
   displayedRecipes : RecipeDto[];
@@ -23,6 +25,7 @@ export class MijnReceptenComponent implements OnInit {
   mijnReceptenbool = true;
   favoReceptenbool = false;
   receptenZoekenbool = false;
+  receptToevoegenbool = false;
 
   loggedUser : EvaUserDto = new EvaUserDto;
 
@@ -33,6 +36,7 @@ export class MijnReceptenComponent implements OnInit {
   recipeSelected = false;
 
   constructor(recipesService: RecipesService, usersService : UsersService) {
+    this.currentCat = "Alle recepten";
     this.recipesService = recipesService;
     this.usersService = usersService;
   }
@@ -49,7 +53,11 @@ export class MijnReceptenComponent implements OnInit {
     this.mijnReceptenbool = false;
     this.favoReceptenbool = false;
     this.receptenZoekenbool = true;
-    this.refreshUser();
+    this.receptToevoegenbool = false;
+    this.usersService.getUser(JSON.parse(localStorage.getItem("myUser")).id).subscribe(result => {
+      this.loggedUser = result;
+      this.displayedRecipes = this.loggedUser.favoriteRecipes;
+    });
   }
 
   favorieteRecepten(){
@@ -57,6 +65,7 @@ export class MijnReceptenComponent implements OnInit {
     this.mijnReceptenbool = false;
     this.favoReceptenbool = true;
     this.receptenZoekenbool = false;
+    this.receptToevoegenbool = false;
     this.usersService.getUser(JSON.parse(localStorage.getItem("myUser")).id).subscribe(result => {
       this.loggedUser = result;
       this.displayedRecipes = this.loggedUser.favoriteRecipes;
@@ -68,10 +77,18 @@ export class MijnReceptenComponent implements OnInit {
     this.mijnReceptenbool = true;
     this.favoReceptenbool = false;
     this.receptenZoekenbool = false;
+    this.receptToevoegenbool = false;
     this.usersService.getUser(JSON.parse(localStorage.getItem("myUser")).id).subscribe(result => {
       this.loggedUser = result;
       this.displayedRecipes = this.loggedUser.myRecipes;
     });
+  }
+
+  receptToevoegen(){
+    this.mijnReceptenbool = false;
+    this.favoReceptenbool = false;
+    this.receptenZoekenbool = false;
+    this.receptToevoegenbool = true;
   }
 
   selectRecipe(recipe){
@@ -86,6 +103,30 @@ export class MijnReceptenComponent implements OnInit {
   refreshUser(){
     console.log("refresh");
     this.usersService.getUser(JSON.parse(localStorage.getItem("myUser")).id).subscribe(result => this.loggedUser = result);
+  }
+
+  fruit(){
+    this.currentCat = "Fruit";
+  }
+
+  flex(){
+    this.currentCat = "Flex"
+  }
+
+  noten(){
+    this.currentCat = "Noten"
+  }
+
+  alles(){
+    this.currentCat = "Alle recepten"
+  }
+
+  tofu(){
+    this.currentCat = "Tofu";
+  }
+
+  desserts(){
+    this.currentCat = "Desserts";
   }
 
   test(){
