@@ -11,9 +11,9 @@ public class AddRecipeDto {
     private String title;
     private String description;
     private long userId;
-    private List<Ingredient> ingredients;
+    private List<AddIngredientDto> ingredients;
 
-    public AddRecipeDto(String title, String description, long userId, List<Ingredient> ingredients) {
+    public AddRecipeDto(String title, String description, long userId, List<AddIngredientDto> ingredients) {
         this.title = title;
         this.description = description;
         this.userId = userId;
@@ -48,11 +48,11 @@ public class AddRecipeDto {
         this.userId = userId;
     }
 
-    public List<Ingredient> getIngredients() {
+    public List<AddIngredientDto> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<Ingredient> ingredients) {
+    public void setIngredients(List<AddIngredientDto> ingredients) {
         this.ingredients = ingredients;
     }
 }

@@ -74,13 +74,20 @@ public class RecipeController {
     public void addNewRecipe(@RequestBody AddRecipeDto addRecipeDto){
         Recipe newRecipe = new Recipe();
         EvaUser user = evaUserRepository.findOne(addRecipeDto.getUserId());
-        for(Ingredient ingredient: addRecipeDto.getIngredients()){
-            ingredientRepository.save(ingredient);
+        Ingredient newIngredient;
+        List<Ingredient> newIngredientList = new ArrayList<>();
+        for(AddIngredientDto ingredient: addRecipeDto.getIngredients()){
+            newIngredient = new Ingredient();
+            newIngredient.setName(ingredient.getName());
+            newIngredient.setAmount(ingredient.getAmount());
+            newIngredient.setMetric(ingredient.getMetric());
+            newIngredientList.add(newIngredient);
+            ingredientRepository.save(newIngredient);
         }
         newRecipe.setTitle(addRecipeDto.getTitle());
         newRecipe.setAuthorName(user.getUsername());
         newRecipe.setDescription(addRecipeDto.getDescription());
-        newRecipe.setIngredients(addRecipeDto.getIngredients());
+        newRecipe.setIngredients(newIngredientList);
         user.getMyRecipes().add(newRecipe);
         recipeRepository.save(newRecipe);
         evaUserRepository.save(user);

@@ -4,6 +4,7 @@ import hello.domain.Challenge;
 import hello.repositories.ChallengeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,11 +31,20 @@ public class ChallengeController {
         }
         int random = 0;
         for(int i = 0; i<=2; i++){
-            random = ThreadLocalRandom.current().nextInt(0, challengeList.size()-1);
+            random = ThreadLocalRandom.current().nextInt(1, challengeList.size()-1);
             resultList.add(challengeList.get(random));
             challengeList.remove(random);
         }
         return resultList;
     }
 
+    @RequestMapping(path = "/addchallenge", method = RequestMethod.POST)
+    public void addChallenge(@RequestBody Challenge challenge){
+        challengeRepository.save(challenge);
+    }
+
+    @RequestMapping(path = "/getallchallenges", method = RequestMethod.GET)
+    public Iterable<Challenge> getAllChallenges(){
+        return challengeRepository.findAll();
+    }
 }
