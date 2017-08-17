@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="be.hogent.Eva2017g5.EVAH5.ui.MainActivity" />
+        <activity android:name="be.hogent.Eva2017g5.EVAH5.ui.MainActivity" >
+
+        </activity>
         <activity android:name="be.hogent.Eva2017g5.EVAH5.ui.RegisterActivity"></activity>
     </application>
 
