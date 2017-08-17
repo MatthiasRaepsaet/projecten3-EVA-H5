@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -32,6 +33,12 @@ android {
     dexOptions {
         preDexLibraries = false
     }
+    dexOptions {
+        //you can speed up your builds by turning on incremental dexing
+        incremental = true;
+        //you can specify the heap size for the dex process
+        javaMaxHeapSize "4g"
+    }
 }
 
 dependencies {
@@ -44,9 +51,7 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.3.2'
-    compile 'org.apache.httpcomponents:httpcore:4.4.1'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
-    compile 'org.apache.httpcomponents:httpclient:4.5'
+    compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:percent:24.2.1'
     compile 'com.android.support:support-v4:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'

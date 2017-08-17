@@ -1,17 +1,25 @@
 package be.hogent.Eva2017g5.EVAH5.rest;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by sofie.
  */
 
 public class Challenge {
+    @SerializedName("_id")
     private long id;
 
+    @SerializedName("title")
     private String title;
+    @SerializedName("description")
     private String description;
+    @SerializedName("difficulty")
     private String difficulty;
+    @SerializedName("contribution")
     private String contribution;
 
+    @SerializedName("points")
     private int points;
 
     public long getId() {
