@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\b7191da0a6315be285dd21b5bd16155910dcd54a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_d8a8d127842416139a4bc8e7327900cf432b6a04.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\5ca7894aa695817626c9ae7023a7922a70f79a61\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_2425a69cb63a4ca35dcbbeccb4c0bcce59bec573.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.3.0\f5e853a20b60758922453d56f9ae1e64af5cb3da\jackson-annotations-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f5e853a20b60758922453d56f9ae1e64af5cb3da">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\jackson-annotations-2.3.0_a2ad730e2ac1b810339a975e57db89b72d93d7cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\a2eaa4a122e545bc77f4349eb5fd69862ccd85b3\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_de6dc2491437aa27e6c9c1b17633307dc106907a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\5f3f443013a49e02fd1278c08baf6669d26b5553\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_a5fc74d697a3cea24bec99c554c4b36281c2eab5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\org.springframework.android\spring-android-rest-template\1.0.1.RELEASE\e132d929bd181941f79b0d63edafb8a86ae6fd33\spring-android-rest-template-1.0.1.RELEASE.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e132d929bd181941f79b0d63edafb8a86ae6fd33">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\spring-android-rest-template-1.0.1.RELEASE_6476ed16c4a1e4be87671359d7fd17597a638d31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\8d9b863e5e0a889bbe3a66dfdc14c7ba37feffb0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_95cd609b465b2799c8138dcfc7592e994c5d5a31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\0e717c603143f1c85e036c38a9b023c1f898cabd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_bc11d12864dfbbf463705b946a645e16e374456a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\8f135d625885c3976cb973c62bed2a68e143d1bc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_a4bf0ee1bd8f26340405b4ba8c4575e92bd02788.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\6e801a3bcf7f54d8c8abaab25139444eba416665\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c394e9a7e1552a4499c7d7d25e7eccd6a533b6df">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_675d525849ed06b620f8572d2225a73e271e220a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\a2eaa4a122e545bc77f4349eb5fd69862ccd85b3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_2aa97a24a682eb8bff5f5efbd559740f8b7312b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\gson-2.4_efb444bfe22fb2bfa953909e7b4af8b8fbdd33f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0-beta4\739e00dea1f0ac04fdb9b6160d667e23cc50a791\retrofit-2.0.0-beta4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0-beta4_43b2606c37276c9318fe39594b11eee37c2ebd5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\dcea8557cbcaa1594659d3ffb44d94a8d190bdbe\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_9fb6ebbfc9b42de84d45c51c7a59845cf1aa73c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\org.springframework.android\spring-android-core\1.0.1.RELEASE\e68f0e8e4b636ee30c4de58953be38d9b72a5e3b\spring-android-core-1.0.1.RELEASE.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e68f0e8e4b636ee30c4de58953be38d9b72a5e3b">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\spring-android-core-1.0.1.RELEASE_2a6d6752df8aea356e13505167431655519420fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\57f0805434138b2386d067b51bb9e7b438acc435\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_b68ff9f72c136ffde6223176439cf833fb0478ea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\e5ca9ede9e2326aad3d467a5e39fd111fba7823f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_9c4b18459022eda409f2bee8abde522f8fd79701.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha8\constraint-layout-solver-1.0.0-alpha8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="80c371a4fd5e1b77f0e3a25b171356878543ffdd">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.0-alpha8_a0b5d5d042199b7ba7cd35253c6dcb7181980a7f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.3.2\c75edc740a6d8cb1cef6fa82fa594e0bce561916\jackson-databind-2.3.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c75edc740a6d8cb1cef6fa82fa594e0bce561916">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\jackson-databind-2.3.2_9763e61e3496abbb78ba3b363df396ba25a8e63e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.1\f5aa318bda4c6c8d688c9d00b90681dcd82ce636\httpcore-4.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f5aa318bda4c6c8d688c9d00b90681dcd82ce636">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\httpcore-4.4.1_9e0f0113750892a2ea713dfae6f7b5fb66736cf8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\57f0805434138b2386d067b51bb9e7b438acc435\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_8ed7b3b4f611f8697c1f9b87eb79c6d8f246b9de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\12baaf5898dd9b9926e45689f6cacfaa84662eda\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_b2b1c866787662a19e6f729dafb05f27a6729cea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\b7538d0aa85a603557fa3afe9fcf64d7109ec310\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_bc2a8d8be1d166689e4e4bba204d0d18cd03ce2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\4a3a07feee606dd1131ce141f0f952a47f25f537\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_80ac860d6f163ef5b0c9f365280110c76c69dab8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_6971ccb0d65a29a54a1c4e8c1d13e96435d67dd5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\aba780f898084330bd25ae95995f1cc8f5b2e60e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0e753ea8d0a2dea270da7d96a7d6e9d2e9c10f94">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_c19c79bc079472c774f8dd696081b2a78d19bc26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\103c399c66dd733ef5d851a463740ae8bbc0738b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_fc143880a0683a8773fff44efd2be2d56701c2db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\okio-1.6.0_ef9c9539e343fe61334f8bbf5a8e88372fd7d09b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\12baaf5898dd9b9926e45689f6cacfaa84662eda\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_4322a078560b10f9d958a6532620f1f219e6b926.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.3.2\559b70ac8a0d5cad611da4223137a920147201ba\jackson-core-2.3.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="559b70ac8a0d5cad611da4223137a920147201ba">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\jackson-core-2.3.2_a6c36d9b08b613c2180e0a6b4de1b0ae9abd342b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.0-beta4\de5935a367ba5e343e9df786ac8fc0c7d52b5f0c\converter-gson-2.0.0-beta4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de5935a367ba5e343e9df786ac8fc0c7d52b5f0c">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\converter-gson-2.0.0-beta4_aaf7ad4a817d553a4c476c379001846040de25c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\b7191da0a6315be285dd21b5bd16155910dcd54a\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_a67ba150950cffe1035b810ebbdaefb089f65c2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\3e11ad82f8623b93b8c510dcd7a9487c2d7df263\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_0333d81a1b9a6f36351814c7bee8cacfa799afee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\5ca7894aa695817626c9ae7023a7922a70f79a61\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_0d525b4450a4f056d6814ae5ef2a1979e2b83eeb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.2.0\f7873a2ebde246a45c2a8d6f3247108b4c88a879\okhttp-3.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\okhttp-3.2.0_5b34b24f6efea14ed5441272edd4a173bf03aa14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\86853a9e60c8e91edaaef0414b546fa48c8911cd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_36429518432bb44bcecc02516ca996c173cdf886.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.2.0\a56f28d5b7fab623c6c1d2afa08dd496d873ac21\logging-interceptor-3.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a56f28d5b7fab623c6c1d2afa08dd496d873ac21">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\logging-interceptor-3.2.0_d8bffc726e9ae9d7cf72891eb3ea4eb82efba011.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sofie\.android\build-cache\3b80aa2a1c629936388134b1bc22aba05e5e76f1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="C:\Users\sofie\Downloads\projecten3-EVA-H5-master\Android\app\build\intermediates\pre-dexed\debug\classes_928c0f923905f5a9adcb3b27fa016950a75c5b24.jar" />
+    </item>
+
+</items>
