@@ -24,7 +24,13 @@ import java.util.Map;
 import be.hogent.Eva2017g5.EVAH5.domain.SessionManager;
 import be.hogent.Eva2017g5.EVAH5.domain.AppConfig;
 import be.hogent.Eva2017g5.EVAH5.domain.AppController;
+import be.hogent.Eva2017g5.EVAH5.rest.ApiInterface;
+import be.hogent.Eva2017g5.EVAH5.rest.Register;
+import be.hogent.Eva2017g5.EVAH5.rest.RetrofitAPI;
 import be.hogent.Eva2017g5.R;
+import retrofit2.Call;
+import retrofit2.Callback;
+import org.apache.commons.validator.routines.EmailValidator;
 
 public class RegisterActivity extends Activity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
@@ -58,7 +64,6 @@ public class RegisterActivity extends Activity {
         // Session manager
         session = new SessionManager(getApplicationContext());
 
-        //HIER nog interactie met db tekort
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to main activity
@@ -77,13 +82,29 @@ public class RegisterActivity extends Activity {
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
 
-                if (!firstname.isEmpty() && !email.isEmpty() && !password.isEmpty() &&!lastname.isEmpty() && username.isEmpty()) {
-                    registerUser(firstname,lastname,username, email, password);
-                } else {
+                if(firstname.isEmpty() || email.isEmpty() || password.isEmpty() || lastname.isEmpty() || username.isEmpty()){
                     Toast.makeText(getApplicationContext(),
                             "Vul aub uw gegevens in!", Toast.LENGTH_LONG)
                             .show();
+                }else if(password.length()<6){
+                    Toast.makeText(getApplicationContext(),
+                            "Wachtwoord moet uit minstens 6 tekens bestaan", Toast.LENGTH_LONG)
+                            .show();
+                }else if(!EmailValidator.getInstance().isValid(email)) {
+                    Toast.makeText(getApplicationContext(),
+                            "Gelieve een correct email op te geven", Toast.LENGTH_LONG)
+                            .show();
+
+                }else if(!firstname.matches("[a-zA-Z]+") || !lastname.matches("[a-zA-Z]+")){
+                    Toast.makeText(getApplicationContext(),
+                            "Gelieve een correcte voornaam en/of achternaam in te geven", Toast.LENGTH_LONG)
+                            .show();
                 }
+                    else
+                {
+                    registerUser(firstname,lastname,username, email, password);
+                }
+
             }
         });
 
@@ -100,6 +121,8 @@ public class RegisterActivity extends Activity {
 
     }
 
+
+
     /**
      * Function to store user in MySQL database will post params(tag, name,
      * email, password) to register url
@@ -112,82 +135,26 @@ public class RegisterActivity extends Activity {
         pDialog.setMessage("Registreren ...");
         showDialog();
 
-        StringRequest strReq = new StringRequest(Method.POST,
-                AppConfig.URL_REGISTER, new Response.Listener<String>() {
-
+        ApiInterface mApiService = RetrofitAPI.getDefaultInterfaceService();
+        Call<Register> mService = mApiService.registration(new Register( email, firstname, lastname,password , username));
+        mService.enqueue(new Callback<Register>() {
             @Override
-            public void onResponse(String response) {
-                Log.d(TAG, "Register Response: " + response.toString());
-                hideDialog();
-
-                try {
-                    JSONObject jObj = new JSONObject(response);
-                    boolean error = jObj.getBoolean("error");
-                    if (!error) {
-                        // User successfully stored in MySQL
-                        // Now store the user in sqlite
-                        String uid = jObj.getString("uid");
-
-                        JSONObject user = jObj.getJSONObject("user");
-                        String firstname = user.getString("firstname");
-                        String lastname = user.getString("lastname");
-                        String username = user.getString("username");
-                        String email = user.getString("email");
-
-
-                        // Inserting row in users table
-                        //DEZE DB CALL AANPASSEN AAN ONZE DATABASE
-                       // db.addUser(firstname,lastname, email, uid);
-
-                        Toast.makeText(getApplicationContext(), "Lid succesvol geregistreerd. Probeer nu in te loggen!", Toast.LENGTH_LONG).show();
-
-                        // Launch login activity
-                        Intent intent = new Intent(
-                                RegisterActivity.this,
-                                LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-
-                        // Error occurred in registration. Get the error
-                        // message
-                        String errorMsg = jObj.getString("error_msg");
-                        Toast.makeText(getApplicationContext(),
-                                errorMsg, Toast.LENGTH_LONG).show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+            public void onResponse(Call<Register> call, retrofit2.Response<Register> response) {
+                if (200 <= response.code() && response.code() <= 300) {
+                    // redirect to Login Activity page
+                    Intent loginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                    startActivity(loginIntent);
                 }
-
             }
-        }, new Response.ErrorListener() {
 
             @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e(TAG, "Registration Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_LONG).show();
-                hideDialog();
+            public void onFailure(Call<Register> call, Throwable t) {
+                call.cancel();
+                Toast.makeText(RegisterActivity.this, "Please check your network connection and internet permission", Toast.LENGTH_LONG).show();
+
             }
-        }) {
+        });
 
-            @Override
-            protected Map<String, String> getParams() {
-                // Posting params to register url
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("firstname", firstname);
-                params.put("lastnamename", lastname);
-                params.put("username", username);
-                params.put("email", email);
-                params.put("password", password);
-
-                return params;
-            }
-
-        };
-
-        // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
     private void showDialog() {

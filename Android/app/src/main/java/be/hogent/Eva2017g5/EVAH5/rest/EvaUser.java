@@ -1,5 +1,7 @@
 package be.hogent.Eva2017g5.EVAH5.rest;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -7,12 +9,18 @@ import java.util.List;
  */
 
 public class EvaUser {
+    @SerializedName("_id")
     private long id;
 
+    @SerializedName("firstname")
     private String firstName;
+    @SerializedName("lastname")
     private String lastName;
+    @SerializedName("email")
     private String email;
+    @SerializedName("username")
     private String username;
+    @SerializedName("password")
     private String password;
 
     private List<Challenge> completedChallenges;

@@ -11,7 +11,7 @@ import com.google.gson.GsonBuilder;
 
 public class RetrofitAPI {
 
-    public final static String BASE_URL = "http://10.0.2.2:3000";  //"http://10.0.2.2:3000"
+    public final static String BASE_URL = "https://backendeva.herokuapp.com/";
 
     public static ApiInterface getDefaultInterfaceService() {
 

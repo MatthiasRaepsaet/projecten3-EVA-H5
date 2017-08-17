@@ -6,8 +6,25 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/vegetarismetitel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/vegetarismetitel" />
+    <TextView
+        android:id="@+id/vegetarisme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/vegetarisme" />
+    <TextView
+        android:id="@+id/veganismetitel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/veganismetitel" />
+
+    <TextView
+        android:id="@+id/veganisme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/veganisme" />
 
 </FrameLayout>

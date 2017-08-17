@@ -40,4 +40,25 @@
 
     <string name="openDrawer">open_drawer</string>
     <string name="closeDrawer">close_drawer</string>
+    <string name="evaintro">EVA werd opgericht in 2000 en was het idee van een handjevol gemotiveerde mensen uit het Gentse. Vandaag is EVA uitgegroeid tot een van de meest bloeiende en snelst groeiende vegetarische organisaties in Europa</string>
+    <string name="geschiedenistitel">Geschiedenis</string>
+    <string name="aanpaktitel">Aanpak</string>
+    <string name="geschiedenis">Op 1 september 2000 ging de Vegetariërsvereniging vzw, die zich meer dan 20 jaar had bekommerd om het vegetarische leven in Vlaanderen, op in EVA vzw. De Vegetariërsvereniging hield op te bestaan. Onze toen nog piepjonge organisatie kreeg op die manier alvast een mooie steun in de rug, en de weg lag open voor verdere groei.
+
+Tot 2005 was EVA vzw uitsluitend een vrijwilligersorganisatie zijn en voornamelijk afhankelijk zijn van lidgelden en sponsoring. Eind 2003 diende EVA een beleidsplan in bij het ministerie van cultuur om in aanmerking te komen voor subsidies. De aanvraag werd positief ontvangen en sinds begin 2005 wordt EVA gesubsidieerd door de Vlaamse Overheid als een beweging voor sociaal-cultureel volwassenenwerk. Dit liet EVA toe de eerste mensen betaald in dienst te nemen.
+
+Vanaf medio 2007 begon EVA sterk te groeien. Allerlei activiteiten werden georganiseerd, actieve vrijwilligers richten regionale groepen op, en we kwamen erg veel in de pers.
+EVA is vandaag uitgegroeid tot de tweede grootste vegetarische organisatie in Europa. Het team werd uitgebreid tot 12 mensen, we werken met meer dan 500 vrijwilligers en zitten sinds 2013 in een mooi groot pand in de Steendam in Gent dat we omtoverden tot het eerste Veggiehuis van België.
+Mede dankzij het succes van campagnes zoals Donderdag Veggiedag, eten steeds meer mensen in Vlaanderen en Brussel regelmatig vegetarisch. 1 op 2 Vlamingen zegt zelfs in de toekomst minder vlees te willen eten. Wij zien het als een van onze belangrijkste taken om het voor die grote groep mensen zo makkelijk mogelijk te maken om die goede voornemens om te zetten in de praktijk.
+</string>
+    <string name="aanpak">... met de vork
+Wij geloven dat we de wereld kunnen veranderen met de vork.. Daarom focust EVA op de praktijk: het koken. Op onze activiteiten krijg je niet alleen informatie over de voordelen van plantaardige voeding, je kunt er ook proeven, ontdekken en koken. Onze recepten zijn uitgebreid en aangepast aan elk niveau, net als onze kookworkshops. Iedereen, van kindjes in de lagere school tot volwassenen, ontdekt bij ons wat het concreet betekent om meer plantaardig te koken. Door zelf in de potten te roeren en te proeven wordt de drempel om plantaardig te eten en te koken lager. Maar we werken ook op grotere schaal. Via trajectbegeleiding bij grootkeukens, zorgen we ervoor dat er ook in bedrijfsrestaurants, ziekenhuizen en scholen plantaardig wordt gekookt .Zo heeft een grote groep mensen de mogelijkheid om meer plantaardig te eten.
+
+... voor iedereen die kookt en eet
+EVA informeert en sensibiliseert het grote publiek, professionals in de horeca, de gezondheidssector, de landbouw- en voedingssector, het middenveld, de media, het onderwijs en andere sectoren, via diverse kanalen, producten en diensten. Door aan te sluiten bij maatschappelijke evoluties wil EVA sneller een kritische massa bereiken van mensen en organisaties die actief hun eet- en kookgedrag aanpassen. De boodschap dat we meer plantaardig moeten eten, wordt zo steeds breder gedragen. De groeiende vraag vanuit de maatschappij naar meer plantaardige producten, verbinden we met de kant van het aanbod, de producenten. Waardoor de evolutie versnelt.
+</string>
+    <string name="vegetarismetitel">Vegetarisme</string>
+    <string name="vegetarisme">Per definitie eet een vegetariër geen producten van gedode dieren, dus geen vlees, geen vis, en ook geen producten zoals gelatine (van huid of beenderen) en kaas (met kalfsstremsel). Veel vegetariërs letten echter minder op vegetarische instinkers zoals gelatine en kaas. Mensen die geen vlees, maar wel vis eten, worden soms pescotariër of semi-vegetariërs genoemd.</string>
+    <string name="veganismetitel">Veganisme</string>
+    <string name="veganisme">Veganisme is een levenswijze waarin gestreefd wordt naar het vermijden van het gebruik van dierlijke producten. Als zodanig gelden ten eerste delen van het dierenlichaam of producten die daarvan vervaardigd zijn (zoals vlees, gelatine, leer, bont en wol) en ten tweede door dieren voortgebrachte producten, zoals zuivel en honing. Vaak worden alternatieven gevonden in het gebruik van plantaardige voedingsmiddelen en materialen. De meeste veganisten keuren ook exploitatie van dieren en wreedheid jegens dieren af, zoals het vasthouden van dieren voor vermaak of ter gebruik als proefdier.</string>
 </resources>

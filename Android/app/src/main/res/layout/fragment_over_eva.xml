@@ -4,10 +4,34 @@
     android:layout_height="match_parent"
     tools:context=".EVAH5.ui.fragments.OverEVAFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/evaintro" />
+    <TextView
+        android:id="@+id/geschiedenistitel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/geschiedenistitel" />
+    <TextView
+        android:id="@+id/geschiedenis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/geschiedenis" />
+
+    <TextView
+        android:id="@+id/aanpaktitel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/aanpaktitel" />
+
+    <TextView
+        android:id="@+id/aanpak"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/aanpak" />
+
+
 
 </FrameLayout>

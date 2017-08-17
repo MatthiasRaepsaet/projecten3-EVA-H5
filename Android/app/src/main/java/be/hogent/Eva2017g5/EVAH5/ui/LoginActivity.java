@@ -18,13 +18,22 @@ import com.android.volley.toolbox.StringRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import be.hogent.Eva2017g5.EVAH5.domain.SessionManager;
 import be.hogent.Eva2017g5.EVAH5.domain.AppConfig;
 import be.hogent.Eva2017g5.EVAH5.domain.AppController;
+import be.hogent.Eva2017g5.EVAH5.rest.ApiInterface;
+import be.hogent.Eva2017g5.EVAH5.rest.Login;
+import be.hogent.Eva2017g5.EVAH5.rest.Recipe;
+import be.hogent.Eva2017g5.EVAH5.rest.RetrofitAPI;
 import be.hogent.Eva2017g5.R;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 public class LoginActivity extends Activity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
@@ -49,7 +58,6 @@ public class LoginActivity extends Activity {
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
 
-        // hier nog interactie met db tekort
 
         // Session manager
         session = new SessionManager(getApplicationContext());
@@ -66,18 +74,16 @@ public class LoginActivity extends Activity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                String email = inputUsername.getText().toString().trim();
+                String username = inputUsername.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
 
-                // Check for empty data in the form
-                if (!email.isEmpty() && !password.isEmpty()) {
-                    // login user
-                    checkLogin(email, password);
-                } else {
+                if(username.isEmpty() || password.isEmpty()){
                     // Prompt user to enter credentials
                     Toast.makeText(getApplicationContext(),
                             "Geef aub uw gegevens in!", Toast.LENGTH_LONG)
                             .show();
+                }else {
+                    checkLogin(username,password);
                 }
             }
 
@@ -97,87 +103,55 @@ public class LoginActivity extends Activity {
     /**
      * function to verify login details in db
      * */
-    private void checkLogin(final String email, final String password) {
+    private void checkLogin(final String username, final String password) {
         // Tag used to cancel the request
-        String tag_string_req = "req_login";
 
-        pDialog.setMessage("Logging in ...");
+        pDialog.setMessage("Aanmelden ...");
         showDialog();
 
-        StringRequest strReq = new StringRequest(Method.POST,
-                AppConfig.URL_LOGIN, new Response.Listener<String>() {
+        ApiInterface mApiService = RetrofitAPI.getDefaultInterfaceService();
+        Call<Login> mService = mApiService.authenticate(new Login(username, password));
 
+        mService.enqueue(new Callback<Login>() {
             @Override
-            public void onResponse(String response) {
-                Log.d(TAG, "Login Response: " + response.toString());
-                hideDialog();
+            public void onResponse(Call<Login> call, retrofit2.Response<Login> response) {
+                if (200 <= response.code() && response.code() <= 300) {
 
-                try {
-                    JSONObject jObj = new JSONObject(response);
-                    boolean error = jObj.getBoolean("error");
+                    ApiInterface api = RetrofitAPI.getWithoutExposeInterfaceService();
+                    Call<List<Recipe>> callRecipes = api.getRecipes();
+                    {
+                        callRecipes.enqueue(new Callback<List<Recipe>>() {
+                            @Override
+                            public void onResponse(Call<List<Recipe>> call, retrofit2.Response<List<Recipe>> response) {
+                                ArrayList<Recipe> recipes = (ArrayList) response.body();
+                                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                                loginIntent.putParcelableArrayListExtra("RECIPES", recipes);
+                                loginIntent.putExtra("USERNAME", username);
+                                // user successfully logged in
+                                // Create login session
+                                session.setLogin(true);
+                                startActivity(loginIntent);
+                            }
 
-                    // Check for error node in json
-                    if (!error) {
-                        // user successfully logged in
-                        // Create login session
-                        session.setLogin(true);
-
-                        // Now store the user in SQLite
-                        String uid = jObj.getString("uid");
-
-                        JSONObject user = jObj.getJSONObject("user");
-                        String name = user.getString("name");
-                        String email = user.getString("email");
-                        String created_at = user
-                                .getString("created_at");
-
-                        // Inserting row in users table
-                        //AANPASSEN AAN ONZE DB
-                       // db.addUser(name, email, uid, created_at);
-
-                        // Launch main activity
-                        Intent intent = new Intent(LoginActivity.this,
-                                MainActivity.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        // Error in login. Get the error message
-                        String errorMsg = jObj.getString("error_msg");
-                        Toast.makeText(getApplicationContext(),
-                                errorMsg, Toast.LENGTH_LONG).show();
+                            @Override
+                            public void onFailure(Call<List<Recipe>> call, Throwable t) {
+                                System.out.println("Failure to get recipes" + t.getMessage());
+                            }
+                        });
                     }
-                } catch (JSONException e) {
-                    // JSON error
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(), "Json error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+
                 }
-
             }
-        }, new Response.ErrorListener() {
 
             @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e(TAG, "Login Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_LONG).show();
-                hideDialog();
-            }
-        }) {
+            public void onFailure(Call<Login> call, Throwable t) {
+                call.cancel();
+                System.out.println();
+                Toast.makeText(LoginActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
 
-            @Override
-            protected Map<String, String> getParams() {
-                // Posting parameters to login url
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("email", email);
-                params.put("password", password);
-
-                return params;
             }
 
-        };
-
-        // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+        });
     }
 
     private void showDialog() {

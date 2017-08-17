@@ -1,7 +1,7 @@
 package be.hogent.Eva2017g5.EVAH5.domain;
 
 /**
- * Created by sofie on
+ * Created by sofie.
  */
 
 import android.content.Context;
