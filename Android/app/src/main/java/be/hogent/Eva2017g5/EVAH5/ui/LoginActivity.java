@@ -4,29 +4,16 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.android.volley.Request.Method;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import be.hogent.Eva2017g5.EVAH5.domain.SessionManager;
-import be.hogent.Eva2017g5.EVAH5.domain.AppConfig;
-import be.hogent.Eva2017g5.EVAH5.domain.AppController;
 import be.hogent.Eva2017g5.EVAH5.rest.ApiInterface;
 import be.hogent.Eva2017g5.EVAH5.rest.Login;
 import be.hogent.Eva2017g5.EVAH5.rest.Recipe;
@@ -37,6 +24,7 @@ import retrofit2.Callback;
 
 public class LoginActivity extends Activity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
+    private ImageView evalogo;
     private Button btnLogin;
     private Button btnLinkToRegister;
     private EditText inputUsername;
@@ -49,6 +37,7 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        evalogo = (ImageView)  findViewById(R.id.evalogo);
         inputUsername = (EditText) findViewById(R.id.username);
         inputPassword = (EditText) findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -116,29 +105,13 @@ public class LoginActivity extends Activity {
             @Override
             public void onResponse(Call<Login> call, retrofit2.Response<Login> response) {
                 if (200 <= response.code() && response.code() <= 300) {
+                    Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    loginIntent.putExtra("USERNAME", username);
+                    // user successfully logged in
+                    // Create login session
+                    session.setLogin(true);
+                    startActivity(loginIntent);
 
-                    ApiInterface api = RetrofitAPI.getWithoutExposeInterfaceService();
-                    Call<List<Recipe>> callRecipes = api.getRecipes();
-                    {
-                        callRecipes.enqueue(new Callback<List<Recipe>>() {
-                            @Override
-                            public void onResponse(Call<List<Recipe>> call, retrofit2.Response<List<Recipe>> response) {
-                                ArrayList<Recipe> recipes = (ArrayList) response.body();
-                                Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
-                                loginIntent.putParcelableArrayListExtra("RECIPES", recipes);
-                                loginIntent.putExtra("USERNAME", username);
-                                // user successfully logged in
-                                // Create login session
-                                session.setLogin(true);
-                                startActivity(loginIntent);
-                            }
-
-                            @Override
-                            public void onFailure(Call<List<Recipe>> call, Throwable t) {
-                                System.out.println("Failure to get recipes" + t.getMessage());
-                            }
-                        });
-                    }
 
                 }
             }

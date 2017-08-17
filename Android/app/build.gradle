@@ -4,7 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion '25.0.0'
     defaultConfig {
-        applicationId "be.sofie.eva"
+        applicationId "be.hogent.Eva2017g5"
         minSdkVersion 17
         targetSdkVersion 24
         versionCode 1
@@ -60,6 +60,6 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.1.2'
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
-    compile 'commons-validator:commons-validator:1.4.1'
+  //  compile 'commons-validator:commons-validator:1.4.1'
     testCompile 'junit:junit:4.12'
 }

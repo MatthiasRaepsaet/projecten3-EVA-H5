@@ -11,7 +11,7 @@ import java.util.List;
  * Created by sofie.
  */
 
-public class Recipe implements Parcelable{
+public class Recipe {
     @SerializedName("_id")
     private String id;
     @SerializedName("title")
@@ -29,6 +29,14 @@ public class Recipe implements Parcelable{
     @SerializedName("comments")
     private List<Comment> comments;
 
+    private String votes;
+
+    public Recipe(String title, String description, String votes){
+        this.title = title;
+        this.description = description;
+        this.votes = votes;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -38,7 +46,7 @@ public class Recipe implements Parcelable{
     }
 
     public String getDescription() {
-        return description;
+        return description.substring(0, 100);
     }
 
     public EvaUser getAuthor() {
@@ -61,15 +69,10 @@ public class Recipe implements Parcelable{
         return comments;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
+    public String getVotes(){
+        return ""+ getDownvotes() + getUpvotes();
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id);
-        dest.writeString(title);
-        dest.writeString(description);
-    }
+
+
 }

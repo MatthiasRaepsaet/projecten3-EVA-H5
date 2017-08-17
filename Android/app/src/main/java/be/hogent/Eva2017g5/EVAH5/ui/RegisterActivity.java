@@ -4,33 +4,19 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.volley.Request.Method;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import be.hogent.Eva2017g5.EVAH5.domain.SessionManager;
-import be.hogent.Eva2017g5.EVAH5.domain.AppConfig;
-import be.hogent.Eva2017g5.EVAH5.domain.AppController;
 import be.hogent.Eva2017g5.EVAH5.rest.ApiInterface;
 import be.hogent.Eva2017g5.EVAH5.rest.Register;
 import be.hogent.Eva2017g5.EVAH5.rest.RetrofitAPI;
 import be.hogent.Eva2017g5.R;
 import retrofit2.Call;
 import retrofit2.Callback;
-import org.apache.commons.validator.routines.EmailValidator;
+//import org.apache.commons.validator.routines.EmailValidator;
 
 public class RegisterActivity extends Activity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
@@ -90,12 +76,14 @@ public class RegisterActivity extends Activity {
                     Toast.makeText(getApplicationContext(),
                             "Wachtwoord moet uit minstens 6 tekens bestaan", Toast.LENGTH_LONG)
                             .show();
-                }else if(!EmailValidator.getInstance().isValid(email)) {
+                }
+                /*else if(!EmailValidator.getInstance().isValid(email)) {
                     Toast.makeText(getApplicationContext(),
                             "Gelieve een correct email op te geven", Toast.LENGTH_LONG)
                             .show();
 
-                }else if(!firstname.matches("[a-zA-Z]+") || !lastname.matches("[a-zA-Z]+")){
+                }*/
+                else if(!firstname.matches("[a-zA-Z]+") || !lastname.matches("[a-zA-Z]+")){
                     Toast.makeText(getApplicationContext(),
                             "Gelieve een correcte voornaam en/of achternaam in te geven", Toast.LENGTH_LONG)
                             .show();

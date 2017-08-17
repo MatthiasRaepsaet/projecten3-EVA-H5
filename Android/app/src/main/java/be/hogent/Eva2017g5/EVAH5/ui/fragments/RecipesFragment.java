@@ -4,28 +4,43 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ExpandableListView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.SearchView;
 
-import java.util.ArrayList;
-
-import be.hogent.Eva2017g5.EVAH5.rest.Recipe;
+import be.hogent.Eva2017g5.EVAH5.ui.MainActivity;
 import be.hogent.Eva2017g5.R;
+import java.util.ArrayList;
+import java.util.List;
+
+import be.hogent.Eva2017g5.EVAH5.rest.ApiInterface;
+import be.hogent.Eva2017g5.EVAH5.rest.Login;
+import be.hogent.Eva2017g5.EVAH5.rest.Recipe;
+import be.hogent.Eva2017g5.EVAH5.rest.RetrofitAPI;
+import be.hogent.Eva2017g5.R;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
-public class RecipesFragment extends Fragment implements SearchView.OnQueryTextListener, SearchView.OnCloseListener{
+public class RecipesFragment extends Fragment {
+
+    private static final String TAG = "RecipesFragment";
 
     private View v;
-    private ExpandableListView recipeList;
-    private ArrayList<Recipe> recipes;
-    private android.widget.SearchView search;
-    private RecipeListAdapter listAdapter;
-    private SearchManager searchManager;
-    private ArrayList<RecipeRow> parentList = new ArrayList<>();
-    private ArrayList<RecipeRow> showTheseParentList = new ArrayList<>();
+    private LinearLayout llContainer;
+    private EditText rSearch;
+    private ListView lvRecipes;
+    private ArrayList<Recipe> recipeArrayList= new ArrayList<Recipe>();
+    private RecipeAdapter adapter;
+
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
@@ -42,62 +57,50 @@ public class RecipesFragment extends Fragment implements SearchView.OnQueryTextL
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        this.v= inflater.inflate(R.layout.fragment_recipes_list, container, false);
-      //  recipeList = (ExpandableListView) v.findViewById(R.id.listExpandableRecipes);
-        searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
-      //  search = (SearchView) v.findViewById(R.id.search);
-        search.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
-        search.setIconifiedByDefault(false);
-        search.setOnQueryTextListener(this);
-        search.setOnCloseListener(this);
-        parentList = new ArrayList<>();
-        showTheseParentList = new ArrayList<>();
+        this.v= inflater.inflate(R.layout.fragment_recipes, container, false);
+        rSearch = (EditText) v.findViewById(R.id.rSearch) ;
+        lvRecipes = (ListView) v.findViewById(R.id.lvRecipes) ;
 
-        this.recipes = getArguments().getParcelableArrayList("RECIPE_TITLES");
-        displayList();
-        expandAll();
+
+        rSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                adapter.getFilter().filter(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         return v;
     }
 
-
-    public void expandAll(){
-        for(int i =0; i<listAdapter.getGroupCount();i++){
-            recipeList.expandGroup(i);
-        }
-    }
-
-    public void displayList(){
-        loadData();
-        listAdapter = new RecipeListAdapter(getContext(), parentList);
-        recipeList.setAdapter(listAdapter);
-    }
-
-    public void loadData(){
-        ArrayList<RecipeRow> defaultChildList = new ArrayList<>();
-        //hier nog logica toevoegen
-
-        System.out.println("Finished loading data: " + parentList.toString());
-    }
-
     @Override
-    public boolean onQueryTextSubmit(String query) {
-        listAdapter.filterData(query);
-        expandAll();
-        return false;
-    }
+    public void onResume() {
+        super.onResume();
 
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        listAdapter.filterData(newText);
-        expandAll();
-        return false;
-    }
+        ApiInterface mApiService = RetrofitAPI.getDefaultInterfaceService();
+        Call<List<Recipe>>  mService = mApiService.getRecipes();
 
-    @Override
-    public boolean onClose() {
-        listAdapter.filterData("");
-        expandAll();
-        return false;
+        mService.enqueue(new Callback<List<Recipe>>() {
+            @Override
+            public void onResponse(Call<List<Recipe>> call, Response<List<Recipe>> response) {
+                recipeArrayList = (ArrayList<Recipe>) response.body();
+                adapter = new RecipeAdapter(getActivity(), recipeArrayList);
+            }
+
+            @Override
+            public void onFailure(Call<List<Recipe>> call, Throwable t) {
+
+            }
+        });
+
     }
 }
