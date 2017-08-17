@@ -19,8 +19,8 @@
     <string name="nav_overEVA">Over EVA</string>
     <string name="nav_vegvsVeg">Vegetarisme vs Veganisme</string>
     <string name="nav_challenges">Challenges</string>
-    <string name="nav_uitleg">Uitleg</string>
-    <string name="nav_profiel">Profiel</string>
+    <string name="nav_logout">Afmelden</string>
+    <string name="nav_recipes">Recepten</string>
 
     <string-array name="nav_item_activity_titles">
         <item>Over EVA</item>
