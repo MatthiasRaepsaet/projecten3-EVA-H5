@@ -4,27 +4,50 @@
     android:layout_height="match_parent"
     tools:context=".EVAH5.ui.fragments.VegvsVegFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+    android:id="@+id/vegscroller"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <TextView
         android:id="@+id/vegetarismetitel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_title_size"
         android:text="@string/vegetarismetitel" />
     <TextView
         android:id="@+id/vegetarisme"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/vegetarismetitel"
+        android:textSize="@dimen/font_size"
         android:text="@string/vegetarisme" />
     <TextView
         android:id="@+id/veganismetitel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/vegetarisme"
+        android:textSize="@dimen/font_title_size"
         android:text="@string/veganismetitel" />
 
     <TextView
         android:id="@+id/veganisme"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/font_size"
+        android:layout_below="@+id/veganismetitel"
         android:text="@string/veganisme" />
+        </RelativeLayout>
+    </ScrollView>
 
 </FrameLayout>

@@ -1,4 +1,4 @@
-package be.hogent.Eva2017g5.EVAH5.rest;
+package be.hogent.Eva2017g5.EVAH5.domainAndModel;
 
 /**
  * Created by sofie.
@@ -43,6 +43,17 @@ public interface ApiInterface {
     @GET("/getallchallenges")
     Call<List<Challenge>> getChallenges();
 
+    @POST("/selectchallenge")
+    Call<ChallengeUserDto> selectChallenge(@Body ChallengeUserDto challengeUserDto);
+
+    @GET("/getidbyusername?username={username}")
+    Call<UserId> getUserId(@Path("username") String username);
+
+    @GET("/getuser?userId={userid}")
+    Call<EvaUser> getUser(@Path("id") String id);
+
+    @POST("/completechallenge")
+    Call<ChallengeUserDto> completeChallenge(@Body ChallengeUserDto challengeUserDto);
 
 
 

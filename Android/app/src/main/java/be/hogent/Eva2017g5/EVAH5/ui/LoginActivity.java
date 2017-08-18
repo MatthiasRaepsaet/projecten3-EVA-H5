@@ -11,17 +11,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import be.hogent.Eva2017g5.EVAH5.domain.SessionManager;
-import be.hogent.Eva2017g5.EVAH5.rest.ApiInterface;
-import be.hogent.Eva2017g5.EVAH5.rest.Login;
-import be.hogent.Eva2017g5.EVAH5.rest.Recipe;
-import be.hogent.Eva2017g5.EVAH5.rest.RetrofitAPI;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.SessionManager;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.ApiInterface;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.Login;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.RetrofitAPI;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.UserId;
 import be.hogent.Eva2017g5.R;
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends Activity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
@@ -106,7 +104,23 @@ public class LoginActivity extends Activity {
             @Override
             public void onResponse(Call<Login> call, retrofit2.Response<Login> response) {
                 if (200 <= response.code() && response.code() <= 300) {
-                    Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    final Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+
+                    ApiInterface mApiService = RetrofitAPI.getDefaultInterfaceService();
+                    Call<UserId> mService = mApiService.getUserId(username);
+                    mService.enqueue(new Callback<UserId>() {
+                        @Override
+                        public void onResponse(Call<UserId> call, Response<UserId> response) {
+                            UserId userId = response.body();
+                            loginIntent.putExtra("USERID", userId.getId());
+                        }
+
+                        @Override
+                        public void onFailure(Call<UserId> call, Throwable t) {
+
+                        }
+                    });
+
                     loginIntent.putExtra("USERNAME", username);
                     // user successfully logged in
                     // Create login session

@@ -1,4 +1,4 @@
-package be.hogent.Eva2017g5.EVAH5.domain;
+package be.hogent.Eva2017g5.EVAH5.domainAndModel;
 
 /**
  * Created by sofie.

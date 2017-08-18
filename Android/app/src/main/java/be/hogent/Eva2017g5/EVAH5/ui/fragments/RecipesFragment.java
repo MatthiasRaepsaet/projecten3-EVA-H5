@@ -1,7 +1,5 @@
 package be.hogent.Eva2017g5.EVAH5.ui.fragments;
 
-import android.app.SearchManager;
-import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.text.Editable;
@@ -9,22 +7,18 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.EditText;
-import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.SearchView;
 
-import be.hogent.Eva2017g5.EVAH5.ui.MainActivity;
 import be.hogent.Eva2017g5.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import be.hogent.Eva2017g5.EVAH5.rest.ApiInterface;
-import be.hogent.Eva2017g5.EVAH5.rest.Login;
-import be.hogent.Eva2017g5.EVAH5.rest.Recipe;
-import be.hogent.Eva2017g5.EVAH5.rest.RetrofitAPI;
-import be.hogent.Eva2017g5.R;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.ApiInterface;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.Recipe;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.RetrofitAPI;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -79,17 +73,16 @@ public class RecipesFragment extends Fragment {
             }
         });
 
-
+       // lvRecipes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+          //  @Override
+         //   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+      //          Fragment nextFrag = new RecipeDetailFragment();
+      //          getChildFragmentManager().beginTransaction().replace(R.id.content_navigation, nextFrag).addToBackStack(null).commit();
+      //      }
+       // });
         return v;
-    }
+   }
 
-    private View.OnClickListener rOnTitleClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Fragment nextFrag = new RecipeDetailFragment();
-            getActivity().getFragmentManager().beginTransaction().replace(R.id.content_navigation, nextFrag).commit();
-        }
-    };
 
     @Override
     public void onResume() {

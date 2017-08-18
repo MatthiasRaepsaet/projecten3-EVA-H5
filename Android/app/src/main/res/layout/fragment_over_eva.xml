@@ -1,37 +1,64 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EVAH5.ui.fragments.OverEVAFragment">
 
+<ScrollView
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+ android:scrollbars="vertical"
+        android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <TextView
         android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/font_size"
         android:text="@string/evaintro" />
     <TextView
         android:id="@+id/geschiedenistitel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/intro"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_title_size"
         android:text="@string/geschiedenistitel" />
     <TextView
         android:id="@+id/geschiedenis"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/font_size"
+        android:layout_below="@+id/geschiedenistitel"
         android:text="@string/geschiedenis" />
 
     <TextView
         android:id="@+id/aanpaktitel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/geschiedenis"
+        android:textSize="@dimen/font_title_size"
         android:text="@string/aanpaktitel" />
 
     <TextView
         android:id="@+id/aanpak"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textSize="@dimen/font_size"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/aanpaktitel"
         android:text="@string/aanpak" />
 
+    </RelativeLayout>
+</ScrollView>
 
-
-</FrameLayout>
+</RelativeLayout>

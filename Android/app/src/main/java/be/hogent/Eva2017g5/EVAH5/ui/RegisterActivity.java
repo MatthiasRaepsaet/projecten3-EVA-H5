@@ -9,10 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import be.hogent.Eva2017g5.EVAH5.domain.SessionManager;
-import be.hogent.Eva2017g5.EVAH5.rest.ApiInterface;
-import be.hogent.Eva2017g5.EVAH5.rest.Register;
-import be.hogent.Eva2017g5.EVAH5.rest.RetrofitAPI;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.SessionManager;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.ApiInterface;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.Register;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.RetrofitAPI;
 import be.hogent.Eva2017g5.R;
 import retrofit2.Call;
 import retrofit2.Callback;

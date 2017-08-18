@@ -1,4 +1,4 @@
-package be.hogent.Eva2017g5.EVAH5.rest;
+package be.hogent.Eva2017g5.EVAH5.domainAndModel;
 
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;

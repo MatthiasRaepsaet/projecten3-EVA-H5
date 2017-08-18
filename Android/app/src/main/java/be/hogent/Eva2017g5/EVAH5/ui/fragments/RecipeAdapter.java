@@ -1,24 +1,19 @@
 package be.hogent.Eva2017g5.EVAH5.ui.fragments;
 
-import android.app.FragmentManager;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import be.hogent.Eva2017g5.R;
-import be.hogent.Eva2017g5.EVAH5.rest.Recipe;
-import be.hogent.Eva2017g5.EVAH5.ui.MainActivity;
+import be.hogent.Eva2017g5.EVAH5.domainAndModel.Recipe;
 
 /**
  * Created by sofie.
