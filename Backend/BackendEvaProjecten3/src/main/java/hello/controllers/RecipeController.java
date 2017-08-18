@@ -50,10 +50,11 @@ public class RecipeController {
             recipeDto.setDownvotes(recipe.getDownvotes());
             recipeDto.setUpvotes(recipe.getUpvotes());
             recipeDto.setIngredients(recipe.getIngredients());
+            recipeDto.setCategory(recipe.getCategory());
             for(Comment comment: recipe.getComments()){
                 commentDto = new CommentDto();
                 commentDto.setId(comment.getId());
-                commentDto.setAuthor(comment.getAuthor().getUsername());
+                commentDto.setAuthor(comment.getAuthor());
                 commentDto.setMessage(comment.getMessage());
                 commentDto.setDownvotes(comment.getDownvotes());
                 commentDto.setUpvotes(comment.getUpvotes());
@@ -88,6 +89,7 @@ public class RecipeController {
         newRecipe.setAuthorName(user.getUsername());
         newRecipe.setDescription(addRecipeDto.getDescription());
         newRecipe.setIngredients(newIngredientList);
+        newRecipe.setCategory(addRecipeDto.getCategory());
         user.getMyRecipes().add(newRecipe);
         recipeRepository.save(newRecipe);
         evaUserRepository.save(user);
@@ -106,26 +108,26 @@ public class RecipeController {
         return recipeRepository.findOne(id);
     }
 
-    @RequestMapping(path = "/addcomment", method = RequestMethod.PUT)
-    public void addComment(@RequestParam long recipeId, @RequestBody AddCommentDto addCommentDto) {
-        Recipe updatedRecipe = recipeRepository.findOne(recipeId);
+    @RequestMapping(path = "/addcomment", method = RequestMethod.POST)
+    public void addComment(@RequestBody AddCommentDto addCommentDto) {
+        Recipe updatedRecipe = recipeRepository.findOne(addCommentDto.getRecipeId());
         EvaUser user = evaUserRepository.findOne(addCommentDto.getUserId());
         Comment newComment = new Comment();
-        newComment.setAuthor(user);
+        newComment.setAuthor(user.getUsername());
         newComment.setMessage(addCommentDto.getMessage());
         commentRepository.save(newComment);
         updatedRecipe.getComments().add(newComment);
         recipeRepository.save(updatedRecipe);
     }
 
-    @RequestMapping(path = "/upvoterecipe", method = RequestMethod.PUT)
+    @RequestMapping(path = "/upvoterecipe", method = RequestMethod.POST)
     public void upvoteRecipe(@RequestParam long id){
         Recipe recipe = recipeRepository.findOne(id);
         recipe.setUpvotes(recipe.getUpvotes()+1);
         recipeRepository.save(recipe);
     }
 
-    @RequestMapping(path = "/downvoterecipe", method = RequestMethod.PUT)
+    @RequestMapping(path = "/downvoterecipe", method = RequestMethod.POST)
     public void downvoteRecipe(@RequestParam long id){
         Recipe recipe = recipeRepository.findOne(id);
         recipe.setDownvotes(recipe.getDownvotes()+1);
@@ -147,10 +149,11 @@ public class RecipeController {
             recipeDto.setDownvotes(recipe.getDownvotes());
             recipeDto.setUpvotes(recipe.getUpvotes());
             recipeDto.setIngredients(recipe.getIngredients());
+            recipeDto.setCategory(recipe.getCategory());
             for(Comment comment: recipe.getComments()){
                 commentDto = new CommentDto();
                 commentDto.setId(comment.getId());
-                commentDto.setAuthor(comment.getAuthor().getUsername());
+                commentDto.setAuthor(comment.getAuthor());
                 commentDto.setMessage(comment.getMessage());
                 commentDto.setDownvotes(comment.getDownvotes());
                 commentDto.setUpvotes(comment.getUpvotes());
@@ -160,4 +163,28 @@ public class RecipeController {
         }
         return recipeDtoList;
     }
+
+    @RequestMapping(path = "/recipesbycategory", method = RequestMethod.GET)
+    public Iterable<Recipe> getRecipesByCategory(@RequestParam String category){
+        Iterable<Recipe> recipeList = recipeRepository.findAll();
+        List<Recipe> resultList = new ArrayList<>();
+        for(Recipe recipe : recipeList){
+            if(recipe.getCategory() == category){
+                resultList.add(recipe);
+            }
+        }
+        return resultList;
+    }
+    @RequestMapping(path = "/searchrecipe", method = RequestMethod.GET)
+    public Iterable<Recipe> searchRecipe(@RequestParam String search){
+        Iterable<Recipe> recipeList = recipeRepository.findAll();
+        List<Recipe> resultList = new ArrayList<>();
+        for(Recipe recipe : recipeList){
+            if(recipe.getTitle().contains(search)){
+                resultList.add(recipe);
+            }
+        }
+        return resultList;
+    }
+
 }

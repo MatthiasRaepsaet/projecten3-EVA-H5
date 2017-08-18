@@ -105,31 +105,44 @@ export class MijnReceptenComponent implements OnInit {
     this.usersService.getUser(JSON.parse(localStorage.getItem("myUser")).id).subscribe(result => this.loggedUser = result);
   }
 
-  fruit(){
-    this.currentCat = "Fruit";
+  button1(){
+    this.currentCat = "Voorgerecht";
+    this.recipesService.getRecipeByCategory(this.currentCat).subscribe( result => {
+      this.displayedRecipes = result;
+    });
   }
 
-  flex(){
-    this.currentCat = "Flex"
+  button2(){
+    this.currentCat = "Hoofdgerecht";
+    this.recipesService.getRecipeByCategory(this.currentCat).subscribe( result => {
+      this.displayedRecipes = result;
+    });
   }
 
-  noten(){
-    this.currentCat = "Noten"
+  button3(){
+    this.currentCat = "Dessert";
+    this.recipesService.getRecipeByCategory(this.currentCat).subscribe( result => {
+      this.displayedRecipes = result;
+    });
   }
 
-  alles(){
-    this.currentCat = "Alle recepten"
+  button4(){
+    this.currentCat = "Cocktail";
+    this.recipesService.getRecipeByCategory(this.currentCat).subscribe( result => {
+      this.displayedRecipes = result;
+    });
   }
 
-  tofu(){
-    this.currentCat = "Tofu";
+  button5(){
+    this.currentCat = "Alle recepten";
+    this.recipesService.getRecipes().subscribe(result => {
+      this.displayedRecipes = result;
+    });
   }
 
-  desserts(){
-    this.currentCat = "Desserts";
-  }
-
-  test(){
-    console.log(JSON.parse(localStorage.getItem("myUser")));
+  zoekRecept(search){
+    this.recipesService.searchRecipe(search).subscribe( result => {
+      this.displayedRecipes = result;
+    });
   }
 }

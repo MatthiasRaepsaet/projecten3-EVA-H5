@@ -4,6 +4,8 @@ import {RecipeDto} from "../../dtos/RecipeDto";
 import {IngredientDto} from "../../dtos/IngredientDto";
 import {RecipesService} from "../../services/recipes.service";
 import {RecipeUserDto} from "../../dtos/RecipeUserDto";
+import {AddCommentDto} from "../../dtos/AddCommentDto";
+import {CommentDto} from "../../dtos/CommentDto";
 
 @Component({
   selector: 'app-selected-recipe',
@@ -80,10 +82,12 @@ export class SelectedRecipeComponent implements OnInit, OnChanges {
   }
 
   likeRecipe(){
+    this.recipeService.upvoteRecipe(this.recipe.id).subscribe();
     this.recipe.upvotes++;
   }
 
   dislikeRecipe(){
+    this.recipeService.downvoteRecipe(this.recipe.id).subscribe();
     this.recipe.downvotes++;
   }
 
@@ -97,5 +101,21 @@ export class SelectedRecipeComponent implements OnInit, OnChanges {
     favRec.userId = JSON.parse(localStorage.getItem("myUser")).id;
     favRec.recipeId = this.recipe.id;
     this.recipeService.addFavoriteRecipe(favRec).subscribe();
+  }
+
+  postMessage(message){
+    let comment : AddCommentDto = new AddCommentDto;
+    let newComment : CommentDto = new CommentDto;
+    comment.message = message;
+    comment.userId = JSON.parse(localStorage.getItem("myUser")).id;
+    comment.recipeId = this.recipe.id;
+    this.recipeService.addComment(comment).subscribe();
+    newComment.author = JSON.parse(localStorage.getItem("myUser")).username;
+    newComment.message = message;
+    newComment.upvotes = 0;
+    newComment.downvotes = 0;
+    console.log(JSON.parse(localStorage.getItem("myUser")).username);
+    console.log(this.recipe.comments);
+    this.recipe.comments.push(newComment);
   }
 }

@@ -12,6 +12,7 @@ public class AddRecipeDto {
     private String description;
     private long userId;
     private List<AddIngredientDto> ingredients;
+    private String category;
 
     public AddRecipeDto(String title, String description, long userId, List<AddIngredientDto> ingredients) {
         this.title = title;
@@ -54,5 +55,13 @@ public class AddRecipeDto {
 
     public void setIngredients(List<AddIngredientDto> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

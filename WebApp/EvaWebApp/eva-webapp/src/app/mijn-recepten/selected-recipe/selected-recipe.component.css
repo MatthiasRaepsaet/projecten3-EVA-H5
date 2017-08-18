@@ -70,3 +70,10 @@ h3 {
 .favButton {
   margin-top: 20px;
 }
+
+.messagePart{
+  border-radius: 2px;
+  margin: 20px;
+  padding: 20px;
+}
+

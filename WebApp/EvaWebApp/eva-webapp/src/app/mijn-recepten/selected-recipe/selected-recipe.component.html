@@ -41,12 +41,18 @@
       <div class="grey lighten-4 comments col s10 z-depth-1">
         <div *ngFor="let com of recipe.comments">
           <div class="white comment z-depth-1" *ngIf="recipe.comments?.length > 0">
-            <h5>{{com.name}}</h5>
+            <h5>{{com.author}}</h5>
             <p>{{com.message}}</p>
           </div>
         </div>
         <div class="comment" *ngIf="recipe.comments?.length === 0">
           <p>geen comments beschikbaar.</p>
+        </div>
+        <div class="messagePart white z-depth-1">
+          <form class="messageform">
+            <textarea placeholder="Type a message" class="materialize-textarea" #message></textarea>
+            <a class="waves-effect waves-light btn green" (click)="postMessage(message.value)">Comment</a>
+          </form>
         </div>
       </div>
       <div class="col s1"></div>

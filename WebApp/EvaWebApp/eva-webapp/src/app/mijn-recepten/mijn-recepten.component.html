@@ -23,30 +23,32 @@
   <div class="row z-depth-2 mydisplay" *ngIf="!receptToevoegenbool">
 
     <div class="col s3 lime sidenavbar">
-      <h2>Category</h2>
-      <div class="categorylist">
+      <div *ngIf="receptenZoekenbool">
+        <form>
+          <input #search>
+          <a class="waves-effect waves-light btn green" (click)="zoekRecept(search.value)">Zoek</a>
+        </form>
+      </div>
+      <h2 *ngIf="!receptenZoekenbool">Category</h2>
+      <div class="categorylist" *ngIf="!receptenZoekenbool">
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green" (click)="fruit()">Fruit</a>
+          <a class="waves-effect waves-light btn green" (click)="button1()">Voorgerecht</a>
           <br>
         </div>
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green" (click)="flex()">Flex</a>
+          <a class="waves-effect waves-light btn green" (click)="button2()">Hoofdgerecht</a>
           <br>
         </div>
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green" (click)="noten()">Noten</a>
+          <a class="waves-effect waves-light btn green" (click)="button3()">Dessert</a>
           <br>
         </div>
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green" (click)="tofu()">Tofu</a>
+          <a class="waves-effect waves-light btn green" (click)="button4()">Cocktail</a>
           <br>
         </div>
         <div class="catbutton">
-          <a class="waves-effect waves-light btn green" (click)="desserts()">Desserts</a>
-          <br>
-        </div>
-        <div class="catbutton">
-          <a class="waves-effect waves-light btn green" (click)="alles()">Alle recepten</a>
+          <a class="waves-effect waves-light btn green" (click)="button5()">Alles</a>
           <br>
         </div>
       </div>

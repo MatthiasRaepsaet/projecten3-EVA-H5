@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * Created by Matthias on 3/07/2017.
  */
@@ -52,5 +54,17 @@ public class UserController {
     @RequestMapping(value = "/getuser", method = RequestMethod.GET)
     public EvaUser getUserById(@RequestParam long userId){
         return evaUserRepository.findOne(userId);
+    }
+
+    @RequestMapping(path = "/getidbyusername", method = RequestMethod.GET)
+    public long getIdByUsername(@RequestParam String username){
+        List<EvaUser> userList = (List<EvaUser>) evaUserRepository.findAll();
+        EvaUser myUser = new EvaUser();
+        for(EvaUser user : userList){
+            if(user.getUsername() == username){
+                myUser = user;
+            }
+        }
+        return myUser.getId();
     }
 }

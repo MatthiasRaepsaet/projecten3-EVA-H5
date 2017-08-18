@@ -19,14 +19,14 @@ export class UsersService {
   }
 
   public loginUser(loginDto : LoginDto): Observable<EvaUserDto> {
-    return this.http.post("http://localhost:8080/login", JSON.stringify(loginDto), this.options).map((response : Response) => response.json());
+    return this.http.post("https://backendeva.herokuapp.com/login", JSON.stringify(loginDto), this.options).map((response : Response) => response.json());
   }
 
   public addUser(user : RegisterDto) {
-    return this.http.post("http://localhost:8080/adduser", JSON.stringify(user), this.options);
+    return this.http.post("https://backendeva.herokuapp.com/adduser", JSON.stringify(user), this.options);
   }
 
   public getUser(userId : number):  Observable<EvaUserDto>{
-    return this.http.get("http://localhost:8080/getuser?userId=" + userId).map((response: Response) => response.json());
+    return this.http.get("https://backendeva.herokuapp.com/getuser?userId=" + userId).map((response: Response) => response.json());
   }
 }

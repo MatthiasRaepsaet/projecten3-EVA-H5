@@ -11,8 +11,7 @@ public class Comment {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
 
-    @ManyToOne
-    private EvaUser author;
+    private String author;
 
     private String message;
     private int upvotes;
@@ -23,7 +22,7 @@ public class Comment {
         this.upvotes = 0;
     }
 
-    public Comment(EvaUser author, String message) {
+    public Comment(String author, String message) {
         this.author = author;
         this.message = message;
         this.upvotes = 0;
@@ -38,11 +37,11 @@ public class Comment {
         this.id = id;
     }
 
-    public EvaUser getAuthor() {
+    public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(EvaUser author) {
+    public void setAuthor(String author) {
         this.author = author;
     }
 
