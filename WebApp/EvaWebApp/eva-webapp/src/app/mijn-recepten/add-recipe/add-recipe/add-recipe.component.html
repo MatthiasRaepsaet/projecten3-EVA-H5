@@ -1,0 +1,11 @@
+<div class="z-depth-2">
+  <form>
+    <div class="row">
+      <div class="input-field col s6"><input placeholder="titel" #titelInput ></div>
+      <div class="input-field col s6"><input type="text" placeholder="category" #categoryInput></div>
+    </div>
+    <div class="input-field col s6"><textarea placeholder="beschrijving" #beschrijvingInput class="materialize-textarea"></textarea></div>
+    <div class="input-field col s6"><textarea placeholder="bv. : '2 stukken appel, 3 eetlepes suiker'" #ingredientenInput class="materialize-textarea"></textarea></div>
+    <a class="waves-effect waves-light btn green addButton" (click)="addNewRecipe(titelInput.value, beschrijvingInput.value, categoryInput.value, ingredientenInput.value)">Add recipe</a>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <img src="../assets/evalogo.jpg">
+  <form>
+    <div class="row">
+      <div class="input-field col s6"><input placeholder="Firstname" #firstNameInput (keyup.enter)="registerAccount(firstNameInput.value, lastNameInput.value, usernameInput.value, passwordInput.value, emailInput.value)"></div>
+      <div class="input-field col s6"><input placeholder="Lastname" #lastNameInput (keyup.enter)="registerAccount(firstNameInput.value, lastNameInput.value, usernameInput.value, passwordInput.value, emailInput.value)"></div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6"><input placeholder="Username" #usernameInput (keyup.enter)="registerAccount(firstNameInput.value, lastNameInput.value, usernameInput.value, passwordInput.value, emailInput.value)"></div>
+      <div class="input-field col s6"><input type="password" placeholder="Password" #passwordInput (keyup.enter)="registerAccount(firstNameInput.value, lastNameInput.value, usernameInput.value, passwordInput.value, emailInput.value)"></div>
+    </div>
+    <input placeholder="Email" #emailInput (keyup.enter)="registerAccount(firstNameInput.value, lastNameInput.value, usernameInput.value, passwordInput.value, emailInput.value)">
+  </form>
+  <a class="waves-effect waves-light btn green" (click)="registerAccount(firstNameInput.value, lastNameInput.value, usernameInput.value, passwordInput.value, emailInput.value)" href="/login">Create Account</a>
+</div>

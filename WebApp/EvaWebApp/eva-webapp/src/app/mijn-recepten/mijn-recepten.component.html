@@ -1,0 +1,84 @@
+<div class="container main" *ngIf="!recipeSelected">
+  <div class="row">
+    <a class="waves-effect waves-light btn col s3 receptbutton green" (click)="mijnRecepten()"
+       *ngIf="!mijnReceptenbool">Mijn recepten</a>
+    <a class="waves-effect waves-light btn col s3 receptbutton light-green" (click)="mijnRecepten()"
+       *ngIf="mijnReceptenbool">Mijn recepten</a>
+
+    <a class="waves-effect waves-light btn col s3 receptbutton green" (click)="favorieteRecepten()"
+       *ngIf="!favoReceptenbool">Favoriete recepten</a>
+    <a class="waves-effect waves-light btn col s3 receptbutton light-green" (click)="favorieteRecepten()"
+       *ngIf="favoReceptenbool">Favoriete recepten</a>
+
+    <a class="waves-effect waves-light btn col s3 receptbutton green" (click)="receptZoeken()"
+       *ngIf="!receptenZoekenbool">Recept zoeken</a>
+    <a class="waves-effect waves-light btn col s3 receptbutton light-green" (click)="receptZoeken()"
+       *ngIf="receptenZoekenbool">Recept zoeken</a>
+
+    <a class="waves-effect waves-light btn col s3 receptbutton green" (click)="receptToevoegen()"
+       *ngIf="!receptToevoegenbool">Recept toevoegen</a>
+    <a class="waves-effect waves-light btn col s3 receptbutton light-green" (click)="receptToevoegen()"
+       *ngIf="receptToevoegenbool">Recept toevoegen</a>
+  </div>
+  <div class="row z-depth-2 mydisplay" *ngIf="!receptToevoegenbool">
+
+    <div class="col s3 lime sidenavbar">
+      <div *ngIf="receptenZoekenbool">
+        <form>
+          <input #search>
+          <a class="waves-effect waves-light btn green" (click)="zoekRecept(search.value)">Zoek</a>
+        </form>
+      </div>
+      <h2 *ngIf="!receptenZoekenbool">Category</h2>
+      <div class="categorylist" *ngIf="!receptenZoekenbool">
+        <div class="catbutton">
+          <a class="waves-effect waves-light btn green" (click)="button1()">Voorgerecht</a>
+          <br>
+        </div>
+        <div class="catbutton">
+          <a class="waves-effect waves-light btn green" (click)="button2()">Hoofdgerecht</a>
+          <br>
+        </div>
+        <div class="catbutton">
+          <a class="waves-effect waves-light btn green" (click)="button3()">Dessert</a>
+          <br>
+        </div>
+        <div class="catbutton">
+          <a class="waves-effect waves-light btn green" (click)="button4()">Cocktail</a>
+          <br>
+        </div>
+        <div class="catbutton">
+          <a class="waves-effect waves-light btn green" (click)="button5()">Alles</a>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s9 grey lighten-2 contentpart">
+      <h1>{{currentCat}}</h1>
+      <div *ngFor="let recipe of displayedRecipes">
+        <div class="row">
+          <div class="col s1"></div>
+          <div class="col s10 myrecipe z-depth-1" (click)="selectRecipe(recipe)">
+            <div class="row">
+              <div class="col s6"><h2>{{recipe.title}}</h2></div>
+              <div class="col s4"></div>
+              <div class="col s2"></div>
+            </div>
+            <div class="row">
+              <p class="col s7">
+                {{recipe.description}}
+              </p>
+              <img
+                src="http://d1nsg9ep31qa5b.cloudfront.net/wp-content/uploads/2016/05/10-tips-voor-veganistisch-eten-2-1024x768.jpg"
+                class="responsive-img col s5">
+            </div>
+          </div>
+          <div class="col s1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-add-recipe *ngIf="receptToevoegenbool"></app-add-recipe>
+</div>
+<app-selected-recipe (recipeSelectedEmitter)="selectedRecipeReceiver($event)" [recipe]="recipe" *ngIf="recipeSelected"></app-selected-recipe>

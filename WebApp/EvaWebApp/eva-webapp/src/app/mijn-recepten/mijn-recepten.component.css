@@ -1,0 +1,35 @@
+.sidenavbar {
+  height: 100%
+}
+ .contentpart {
+  height: inherit;
+   overflow: scroll;
+   overflow-x: hidden;
+ }
+
+ .mydisplay {
+   height: 625px;
+ }
+.catbutton {
+  display: table;
+  margin: 0 auto;
+}
+
+.catbutton > a{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 200px;
+}
+
+.myrecipe {
+  margin: 5px;
+  height: 100%;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.myrecipe:hover {
+  background-color: #e8e8e8;
+}
+
+

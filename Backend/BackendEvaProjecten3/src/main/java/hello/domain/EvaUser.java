@@ -1,6 +1,10 @@
 package hello.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonView;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -42,6 +46,19 @@ public class EvaUser {
         this.todaysChallenges = todaysChallenges;
         this.myRecipes = myRecipes;
         this.favoriteRecipes = favoriteRecipes;
+    }
+
+    public EvaUser(String firstName, String lastName, String email, String username, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.score = 0;
+        this.completedChallenges = new ArrayList<>();
+        this.todaysChallenges = new ArrayList<>();
+        this.myRecipes = new ArrayList<>();
+        this.favoriteRecipes = new ArrayList<>();
     }
 
     public EvaUser() {

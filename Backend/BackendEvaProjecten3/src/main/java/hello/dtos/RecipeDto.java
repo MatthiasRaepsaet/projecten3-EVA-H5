@@ -19,6 +19,7 @@ public class RecipeDto {
     private int upvotes;
     private int downvotes;
     private List<CommentDto> comments = new ArrayList<>();
+    private String category;
 
     public RecipeDto(long id, String title, String author, String description, List<Ingredient> ingredients, int upvotes, int downvotes, List<CommentDto> comments) {
         this.id = id;
@@ -96,5 +97,13 @@ public class RecipeDto {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

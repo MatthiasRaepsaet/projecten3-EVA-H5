@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : BackendEva.war">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="archive" name="BackendEva.war">
+      <element id="artifact" artifact-name="Gradle : BackendEva.war (exploded)" />
+    </root>
+  </artifact>
+</component>
