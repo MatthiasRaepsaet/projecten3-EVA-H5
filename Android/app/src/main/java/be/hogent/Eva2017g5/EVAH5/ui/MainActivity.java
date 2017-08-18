@@ -1,13 +1,15 @@
 package be.hogent.Eva2017g5.EVAH5.ui;
 
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -24,7 +26,7 @@ import android.widget.Toast;
 import  be.hogent.Eva2017g5.EVAH5.ui.fragments.*;
 import be.hogent.Eva2017g5.R;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
     private FrameLayout contentPanelFrame;
     private FrameLayout contentFrame;
     private Menu menu;
@@ -36,9 +38,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bundle bundle = this.getIntent().getExtras();
         setContentView(R.layout.activity_main);
-        FragmentManager fragmentManager = getSupportFragmentManager();
+       // Bundle bundle = this.getIntent().getExtras();
+
+        FragmentManager fragmentManager =  getFragmentManager();
 
         contentFrame = (FrameLayout) findViewById(R.id.content_navigation);
         contentPanelFrame = (FrameLayout) findViewById(R.id.content_minor_panel);
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragmentManager.beginTransaction().replace(R.id.content_navigation,new OverEVAFragment()).commit();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    //    setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -57,8 +60,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
-        TextView username = (TextView) header.findViewById(R.id.username);
-        username.setText(bundle.getString("USERNAME"));
+      //  TextView username = (TextView) header.findViewById(R.id.username);
+       // username.setText(bundle.getString("USERNAME"));
 
     }
 
@@ -73,7 +76,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -81,9 +83,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Fragment fragment = null;
         Bundle bundle = new Bundle();
         switch (id){
-            case R.id.nav_challenges: fragment = new ChallengesFragment();
+            case R.id.nav_challenges: fragment = (Fragment) new ChallengesFragment();
                 break;
-            case R.id.nav_overEVA: fragment = new OverEVAFragment();
+            case R.id.nav_overEva: fragment = new OverEVAFragment();
                 break;
             case R.id.nav_vegvsVeg: fragment = new VegvsVegFragment();
                 break;
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
         }
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_navigation, fragment).commit();
 
         item.setChecked(true);
@@ -108,19 +110,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-
-        // show menu only when home fragment is selected
-        if (navItemIndex == 0) {
-            getMenuInflater().inflate(R.menu.main, menu);
-        }
-
-
-        return true;
-    }
 
 
 

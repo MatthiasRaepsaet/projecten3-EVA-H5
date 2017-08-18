@@ -11,7 +11,7 @@ import com.google.gson.GsonBuilder;
 
 public class RetrofitAPI {
 
-    public final static String BASE_URL = "https://backendeva.herokuapp.com/";
+    public final static String BASE_URL = "https://backendeva.herokuapp.com";
 
     public static ApiInterface getDefaultInterfaceService() {
 
@@ -31,7 +31,6 @@ public class RetrofitAPI {
     public static ApiInterface getWithoutExposeInterfaceService() {
 
         Gson gson = new GsonBuilder().registerTypeAdapterFactory(new SingletonListTypeAdapterFactory())
-                .excludeFieldsWithoutExposeAnnotation()
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()

@@ -43,9 +43,7 @@ public class RegisterActivity extends Activity {
         btnRegister = (Button) findViewById(R.id.btnRegister);
         btnLinkToLogin = (Button) findViewById(R.id.btnLinkToLoginScreen);
 
-        // Progress dialog
-        pDialog = new ProgressDialog(this);
-        pDialog.setCancelable(false);
+
 
         // Session manager
         session = new SessionManager(getApplicationContext());
@@ -120,8 +118,7 @@ public class RegisterActivity extends Activity {
         // Tag used to cancel the request
         String tag_string_req = "req_register";
 
-        pDialog.setMessage("Registreren ...");
-        showDialog();
+
 
         ApiInterface mApiService = RetrofitAPI.getDefaultInterfaceService();
         Call<Register> mService = mApiService.registration(new Register( email, firstname, lastname,password , username));
@@ -145,13 +142,5 @@ public class RegisterActivity extends Activity {
 
     }
 
-    private void showDialog() {
-        if (!pDialog.isShowing())
-            pDialog.show();
-    }
 
-    private void hideDialog() {
-        if (pDialog.isShowing())
-            pDialog.dismiss();
-    }
 }

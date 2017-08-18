@@ -5,11 +5,12 @@ package be.hogent.Eva2017g5.EVAH5.rest;
  */
 
 public class Login {
-    private String username;
     private String password;
+    private String username;
 
 
-    public Login(String username, String password) {
+
+    public Login( String password,String username) {
         this.username = username;
         this.password = password;
     }

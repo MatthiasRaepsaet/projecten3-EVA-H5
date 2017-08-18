@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -99,7 +100,7 @@ public class LoginActivity extends Activity {
         showDialog();
 
         ApiInterface mApiService = RetrofitAPI.getDefaultInterfaceService();
-        Call<Login> mService = mApiService.authenticate(new Login(username, password));
+        Call<Login> mService = mApiService.authenticate(new Login(password, username));
 
         mService.enqueue(new Callback<Login>() {
             @Override
@@ -118,9 +119,11 @@ public class LoginActivity extends Activity {
 
             @Override
             public void onFailure(Call<Login> call, Throwable t) {
-                call.cancel();
                 System.out.println();
                 Toast.makeText(LoginActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                Log.d("Error", "Verbinding met database mislukt");
+                call.cancel();
+
 
             }
 

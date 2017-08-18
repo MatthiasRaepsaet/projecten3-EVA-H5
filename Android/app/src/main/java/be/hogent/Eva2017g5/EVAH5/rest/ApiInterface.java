@@ -40,6 +40,9 @@ public interface ApiInterface {
     @POST("/downvote?recipeId={recipeid}")
     Call<Recipe> downvoteRecipe(@Path("id") String id);
 
+    @GET("/getallchallenges")
+    Call<List<Challenge>> getChallenges();
+
 
 
 

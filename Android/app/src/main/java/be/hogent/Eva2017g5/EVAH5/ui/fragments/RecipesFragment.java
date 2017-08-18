@@ -3,7 +3,7 @@ package be.hogent.Eva2017g5.EVAH5.ui.fragments;
 import android.app.SearchManager;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -79,8 +79,17 @@ public class RecipesFragment extends Fragment {
             }
         });
 
+
         return v;
     }
+
+    private View.OnClickListener rOnTitleClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Fragment nextFrag = new RecipeDetailFragment();
+            getActivity().getFragmentManager().beginTransaction().replace(R.id.content_navigation, nextFrag).commit();
+        }
+    };
 
     @Override
     public void onResume() {

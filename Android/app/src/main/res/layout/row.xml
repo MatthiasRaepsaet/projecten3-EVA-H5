@@ -8,25 +8,31 @@
 
     <TextView
         android:id="@+id/rTitel"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:layout_weight="1"
         />
     <TextView
         android:id="@+id/rDescription"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:layout_weight="1"
         />
     <TextView
         android:id="@+id/rVotes"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:layout_weight="1"
         />
+    <Button
+        android:id="@+id/rMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="meer..."
+        android:textColor="@color/grey"/>
 
 
     </LinearLayout>

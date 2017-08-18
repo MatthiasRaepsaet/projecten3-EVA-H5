@@ -1,13 +1,17 @@
 package be.hogent.Eva2017g5.EVAH5.ui.fragments;
 
+import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +27,7 @@ import be.hogent.Eva2017g5.EVAH5.ui.MainActivity;
 class RecipeAdapter extends BaseAdapter implements Filterable {
     private ArrayList<Recipe> rOriginal, rDisplayed;
     LayoutInflater inflater;
+    private ListView rListView;
 
     public RecipeAdapter(Context context, ArrayList<Recipe> recipeArrayList){
         this.rDisplayed = recipeArrayList;
@@ -49,12 +54,13 @@ class RecipeAdapter extends BaseAdapter implements Filterable {
     private class ViewHolder {
         LinearLayout llContainer;
         TextView rTitel,rDescription, rVotes;
+
     }
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
-        ViewHolder holder = null;
+        ViewHolder holder;
 
         if (convertView == null) {
 
@@ -64,6 +70,7 @@ class RecipeAdapter extends BaseAdapter implements Filterable {
             holder.rTitel = (TextView) convertView.findViewById(R.id.rTitel);
             holder.rDescription = (TextView) convertView.findViewById(R.id.rDescription);
             holder.rVotes = (TextView) convertView.findViewById(R.id.rVotes);
+
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -72,8 +79,12 @@ class RecipeAdapter extends BaseAdapter implements Filterable {
         holder.rDescription.setText(rDisplayed.get(position).getDescription());
         holder.rVotes.setText(rDisplayed.get(position).getVotes());
 
+
+
         return convertView;
     }
+
+
 
     @Override
     public Filter getFilter() {
